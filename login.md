@@ -9,17 +9,17 @@ refresh_token   ???
 
 Bez client_id, nebi grant_type dostaneme
 
-´´´
+```
 {
   "error": "invalid_client",
   "error_description": "Unknown Client or invalid grant type."
 }
-´´´
+```
 
 bez validního refresh_token
 
-´´´
+```
 {
   "error": "invalid_grant"
 }
-´´´
+```
