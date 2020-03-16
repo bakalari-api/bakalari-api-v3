@@ -17,7 +17,8 @@ při POST
 
 
 Příklad
-```{
+```
+{
   "UserUID":"4823/moje_id",
   "Class":{
     "Id":"XL",
@@ -105,4 +106,5 @@ Příklad
       }
     }
   }
-}```
+}
+```
