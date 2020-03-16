@@ -1,4 +1,4 @@
-#User
+# User
 
 Vrací informace o uživateli
 
@@ -8,7 +8,7 @@ Content-Type: application/x-www-form-urlencoded
 "Authorization: Bearer ACCES_TOKEN"
 ```
 
-##Chyby
+## Chyby
 při starém/neplatném ACCES TOKENU
 ```{"Message":"Authorization has been denied for this request."}```
 
