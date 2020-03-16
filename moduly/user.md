@@ -1,10 +1,24 @@
+# User
+
+Vrací informace o uživateli
+
+```
+GET /api/3/user
+Content-Type: application/x-www-form-urlencoded
+"Authorization: Bearer ACCES_TOKEN"
+```
+
+## Chyby
+při starém/neplatném ACCES TOKENU
+```{"Message":"Authorization has been denied for this request."}```
+
+při POST
+```{"Message":"The requested resource does not support http method 'POST'."}```
 
 
-
-
-
+Příklad
 ```{
-  "UserUID":"4823/RGS1L1",
+  "UserUID":"4823/moje_id",
   "Class":{
     "Id":"XL",
     "Abbrev":"X.A",
