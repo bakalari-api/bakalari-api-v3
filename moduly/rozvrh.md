@@ -1,14 +1,7 @@
-#Rozvrh
+# Rozvrh
 
-##stálý rozvrh:
-
-```
-GET /api/3/timetable/permanent
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCES_TOKEN"
-```
-
-##aktuální rozvrh:
+## aktuální rozvrh:
+formát data ```YYYY-MM-dd```
 
 ```
 GET /api/3/timetable/actual?date=YYYY-MM-dd
@@ -16,7 +9,15 @@ GET /api/3/timetable/actual?date=YYYY-MM-dd
 "Authorization: Bearer ACCES_TOKEN"
 ```
 
-##Chyby
+## stálý rozvrh:
+
+```
+GET /api/3/timetable/permanent
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCES_TOKEN"
+```
+
+## Chyby
 
 při starém/neplatném ACCES TOKENU (asi bude všude stejné)
 ```{"Message":"Authorization has been denied for this request."}```
