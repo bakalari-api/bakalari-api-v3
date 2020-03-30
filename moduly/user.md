@@ -5,11 +5,11 @@ Vrací informace o uživateli
 ```
 GET /api/3/user
 Content-Type: application/x-www-form-urlencoded
-"Authorization: Bearer ACCES_TOKEN"
+"Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Chyby
-při starém/neplatném ACCES TOKENU
+při starém/neplatném ACCESS TOKENU
 ```{"Message":"Authorization has been denied for this request."}```
 
 při POST
