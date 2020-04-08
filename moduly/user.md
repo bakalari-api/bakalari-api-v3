@@ -10,7 +10,6 @@ Content-Type: application/x-www-form-urlencoded
 
 ## Chyby
 při starém/neplatném ACCESS TOKENU
-
 ```401 Unauthorized```
 ```{"Message":"Authorization has been denied for this request."}```
 
