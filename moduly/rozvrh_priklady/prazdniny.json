@@ -1,0 +1,135 @@
+{
+  "Hours":[
+    {
+      "Id":2,
+      "Caption":"0",
+      "BeginTime":"7:05",
+      "EndTime":"7:50"
+    },
+    {
+      "Id":3,
+      "Caption":"1",
+      "BeginTime":"8:00",
+      "EndTime":"8:45"
+    },
+    {
+      "Id":4,
+      "Caption":"2",
+      "BeginTime":"8:55",
+      "EndTime":"9:40"
+    },
+    {
+      "Id":5,
+      "Caption":"3",
+      "BeginTime":"10:00",
+      "EndTime":"10:45"
+    },
+    {
+      "Id":6,
+      "Caption":"4",
+      "BeginTime":"10:55",
+      "EndTime":"11:40"
+    },
+    {
+      "Id":7,
+      "Caption":"5",
+      "BeginTime":"11:50",
+      "EndTime":"12:35"
+    },
+    {
+      "Id":8,
+      "Caption":"6",
+      "BeginTime":"12:40",
+      "EndTime":"13:25"
+    },
+    {
+      "Id":9,
+      "Caption":"7",
+      "BeginTime":"13:35",
+      "EndTime":"14:20"
+    },
+    {
+      "Id":10,
+      "Caption":"8",
+      "BeginTime":"14:30",
+      "EndTime":"15:15"
+    },
+    {
+      "Id":11,
+      "Caption":"9",
+      "BeginTime":"15:20",
+      "EndTime":"16:05"
+    },
+    {
+      "Id":12,
+      "Caption":"10",
+      "BeginTime":"16:10",
+      "EndTime":"16:55"
+    }
+  ],
+  "Days":[
+    {
+      "Atoms":[
+
+      ],
+      "DayOfWeek":1,
+      "Date":"2020-07-06T00:00:00+02:00",
+      "DayDescription":"Mistr Jan Hus",
+      "DayType":"Celebration"
+    },
+    {
+      "Atoms":[
+
+      ],
+      "DayOfWeek":2,
+      "Date":"2020-07-07T00:00:00+02:00",
+      "DayDescription":"",
+      "DayType":"Holiday"
+    },
+    {
+      "Atoms":[
+
+      ],
+      "DayOfWeek":3,
+      "Date":"2020-07-08T00:00:00+02:00",
+      "DayDescription":"",
+      "DayType":"Holiday"
+    },
+    {
+      "Atoms":[
+
+      ],
+      "DayOfWeek":4,
+      "Date":"2020-07-09T00:00:00+02:00",
+      "DayDescription":"",
+      "DayType":"Holiday"
+    },
+    {
+      "Atoms":[
+
+      ],
+      "DayOfWeek":5,
+      "Date":"2020-07-10T00:00:00+02:00",
+      "DayDescription":"",
+      "DayType":"Holiday"
+    }
+  ],
+  "Classes":[
+
+  ],
+  "Groups":[
+
+  ],
+  "Subjects":[
+
+  ],
+  "Teachers":[
+
+  ],
+  "Rooms":[
+
+  ],
+  "Cycles":[
+
+  ]
+}
