@@ -9,7 +9,7 @@ Content-Type: application/x-www-form-urlencoded
 ```
 
 ## Chyby
-při starém/neplatném ACCESS TOKENU
+při starém / neplatném ACCESS TOKENU
 ```401 Unauthorized```
 ```{"Message":"Authorization has been denied for this request."}```
 
@@ -21,7 +21,7 @@ při POST
 (Je možné, že o velkých prázdninách nebude vracet pololetí a možná ani moduly...)
 
 Příklad
-```
+```json
 {
   "UserUID":"4823/moje_id",
   "Class":{
