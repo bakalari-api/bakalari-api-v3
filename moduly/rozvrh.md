@@ -34,7 +34,7 @@ Změny jsou také řešené pomocí variací ```ChangeType```
 
 Třídní absence je řešená použitím ```Canceled``` parametru
 
-```.json
+```json
 "Change":{
   "ChangeSubject":null,
   "Day":"2020-02-26T00:00:00+01:00",
@@ -48,7 +48,7 @@ Třídní absence je řešená použitím ```Canceled``` parametru
 ```
 ```Added``` - změna nebo přidání hodiny
 
-```
+```json
 "Change":{
   "ChangeSubject":null,
   "Day":"2020-02-24T00:00:00+01:00",
@@ -61,7 +61,8 @@ Třídní absence je řešená použitím ```Canceled``` parametru
 }
 ```
 ```Removed``` - odstranění hodiny
-```
+
+```json
 "Change":{
   "ChangeSubject":null,
   "Day":"2020-02-26T00:00:00+01:00",
@@ -77,7 +78,7 @@ Třídní absence je řešená použitím ```Canceled``` parametru
 
 ## Chyby
 
-při starém/neplatném ACCESS TOKENU (asi bude všude stejné)
+při starém / neplatném ACCESS TOKENU
 
 ```401 Unauthorized```
 ```{"Message":"Authorization has been denied for this request."}```
@@ -90,7 +91,7 @@ při POST
 při špatně naformátovaném datu
 ```400 Bad Request```
 
-```
+```json
 {
   "Message":"The request is invalid.",
   "ModelState":{
