@@ -1,7 +1,8 @@
-### Známky
+# Známky
 
 vrací předměty a jejich známky
 
+## Požadavek
 ```
 GET /api/3/marks
 "Content-Type: application/x-www-form-urlencoded"
@@ -9,7 +10,7 @@ GET /api/3/marks
 ```
 
 
-
+## Odpověď
 Čeština je příkladem klasického známkování (1, 1-, ...).
 matematika je příkladem procentuálního / bodového známkování
 ```200 OK```

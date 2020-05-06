@@ -2,7 +2,7 @@
 
 všechny vysvědčení od začátku studia
 
-
+## Požadavek
 
 ```
 GET /api/3/marks/final
@@ -10,7 +10,7 @@ GET /api/3/marks/final
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-
+## Odpověď
 
 ```200 OK```
 ```json

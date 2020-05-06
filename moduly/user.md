@@ -2,25 +2,14 @@
 
 Vrací informace o uživateli
 
+## Požadavek
 ```
 GET /api/3/user
 Content-Type: application/x-www-form-urlencoded
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-## Chyby
-při starém / neplatném ACCESS TOKENU
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
-
-při POST
-
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."}```
-
-(Je možné, že o velkých prázdninách nebude vracet pololetí a možná ani moduly...)
-
-Příklad
+## Odpověď
 ```json
 {
   "UserUID":"4823/moje_id",
@@ -112,3 +101,15 @@ Příklad
   }
 }
 ```
+
+## Chyby
+při starém / neplatném ACCESS TOKENU
+```401 Unauthorized```
+```{"Message":"Authorization has been denied for this request."}```
+
+při POST
+
+```405 Method Not Allowed```
+```{"Message":"The requested resource does not support http method 'POST'."}```
+
+(Je možné, že o velkých prázdninách nebude vracet pololetí a možná ani moduly...)
