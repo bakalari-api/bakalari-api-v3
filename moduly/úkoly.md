@@ -2,15 +2,16 @@
 
 ## Požadavek
 ```
-GET /api/3/homeworks
+GET /api/3/homeworks (?from=YYYY-MM-dd)
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-
 ## Odpověď
 
-Vrací seznam všech úkolů za pololetí
+Bez ```from``` parametru vrací úkoly 2 měsíce nazpět.
+S ```from``` vrací úkoly od zadaného data do nynějška. Pokud úkol začíná například 1. a končí 10., po vyžádání například 5. se vrátí také, i když začal dříve.
+
 Část odpovědi serveru ze dne 2020-05-05
 
 ```200 OK```
@@ -51,7 +52,13 @@ Vrací seznam všech úkolů za pololetí
         "Name":"Příjmení jméno"
       },
       "Attachments":[
-
+		    {
+          "Id":"UAMULAAAAA",
+          "Name":"Obrázek.jpg",
+          "Type":"image/jpeg",
+          "Size":0
+        },
+		    ...
       ]
     },
     {
