@@ -20,9 +20,9 @@
 
 /api/3/gdpr/consents/person/child
 
-[/api/3/homeworks](moduly/úkoly nové.md)
+[/api/3/homeworks](moduly/úkoly%20nové.md)
 
-[/api/3/homeworks/count-actual](moduly/úkoly nové.md)
+[/api/3/homeworks/count-actual](moduly/úkoly%20nové.md)
 
 [/api/3/komens/attachment/$ID](moduly/attachment.md)
 
@@ -58,9 +58,9 @@
 
 [/api/3/marks](moduly/známky.md)
 
-[/api/3/marks/count-new](moduly/známky nové.md)
+[/api/3/marks/count-new](moduly/známky%20nové.md)
 
-[/api/3/marks/final](moduly/známky pololetí.md)
+[/api/3/marks/final](moduly/známky%20pololetí.md)
 
 /api/3/marks/measures
 
