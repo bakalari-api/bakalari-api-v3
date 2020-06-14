@@ -20,7 +20,7 @@
 
 /api/3/gdpr/consents/person/child
 
-[/api/3/homeworks](moduly/úkoly%20nové.md)
+[/api/3/homeworks](moduly/úkoly.md)
 
 [/api/3/homeworks/count-actual](moduly/úkoly%20nové.md)
 
@@ -54,7 +54,7 @@
 
 /api/3/marking/atoms
 
-/api/3/marking/marks
+/api/3/marking/marks/$ID
 
 [/api/3/marks](moduly/známky.md)
 
@@ -68,9 +68,9 @@
 
 /api/3/register-notification
 
-/api/3/subjects
+[/api/3/subjects](moduly/předměty.md)
 
-/api/3/subjects/themes
+[/api/3/subjects/themes/$ID](moduly/témata.md)
 
 /api/3/substitutions
 
@@ -80,3 +80,4 @@
 
 [/api/3/user](moduly/user.md)
 
+/api/3/webmodule
