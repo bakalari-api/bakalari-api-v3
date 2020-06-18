@@ -1,10 +1,10 @@
-/api/3/absence/student
+[/api/3/absence/student](moduly/absence.md)
 
 /api/3/classbook
 
-/api/3/events
+[/api/3/events](moduly/events.md)
 
-/api/3/events/my
+[/api/3/events/my](moduly/events.md)
 
 /api/3/gdpr/commissioner
 
@@ -28,13 +28,13 @@
 
 /api/3/komens/message
 
+/api/3/komens/message/$ID
+
 /api/3/komens/message-types
 
 /api/3/komens/message-types/edit
 
 /api/3/komens/message-types/reply
-
-/api/3/komens/message/$ID
 
 /api/3/komens/messages/apology
 
@@ -62,7 +62,7 @@
 
 [/api/3/marks/final](moduly/známky%20pololetí.md)
 
-/api/3/marks/measures
+[/api/3/marks/measures](moduly/známky%20chování.md)
 
 /api/3/marks/what-if
 
@@ -72,7 +72,7 @@
 
 [/api/3/subjects/themes/$ID](moduly/témata.md)
 
-/api/3/substitutions
+[/api/3/substitutions](moduly/substitutions.md)
 
 [/api/3/timetable/actual](moduly/rozvrh.md)
 
