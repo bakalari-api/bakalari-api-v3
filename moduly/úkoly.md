@@ -52,13 +52,19 @@ S ```from``` vrací úkoly od zadaného data do nynějška. Pokud úkol začín�
         "Name":"Příjmení jméno"
       },
       "Attachments":[
-		    {
+		{
           "Id":"UAMULAAAAA",
           "Name":"Obrázek.jpg",
           "Type":"image/jpeg",
           "Size":0
         },
-		    ...
+		{
+          "Id":"U   4AAAAG",
+          "Name":"dokument.pdf",
+          "Type":"application/pdf",
+          "Size":609435
+         },
+		 ...
       ]
     },
     {
@@ -151,3 +157,23 @@ při POST
 
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'POST'."} ```
+
+při špatně naformátovaném datu
+
+```400 Bad Request```
+``` json
+{
+   "Message":"The request is invalid.",
+   "ModelState":{
+      "$type":"HttpError",
+      "from":{
+         "$type":"String[]",
+         "$values":[
+            "The value 'VADNÝ_DATUM' is not valid for Nullable`1."
+         ]
+      }
+   }
+}
+```
+
+

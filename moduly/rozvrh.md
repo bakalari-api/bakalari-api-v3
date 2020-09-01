@@ -23,10 +23,12 @@ GET /api/3/timetable/permanent
 
 [Příklad prázdnin](rozvrh_priklady/prazdniny.json)
 
-O svátcích a prázdninách vrací u dnů prázdné ```Atoms``` a v parametru ```DayType``` místo ```WorkDay``` hodnoty ```Holiday``` nebo ```Celebration``` (možná i další)
+O svátcích a prázdninách vrací u dnů prázdné ```Atoms``` a v parametru ```DayType``` místo ```WorkDay``` hodnoty ```Holiday``` nebo ```Celebration```
 Někdy vrací i jméno události ```"DayDescription":"Nový rok"```, ```"Mistr Jan Hus"```
 
 Pokud jsou celý týden prázdniny/volno, všechno mimo ```Hours``` je prázdné
+
+Pro data před začátkem aktuálního školního roku vrací 1. týden školy, resp. dny od 1. září. Pokud je 1. září o víkendu, vrací  pro něj hodnotu  ```DayType``` ```Weekend```
 
 ### Změny
 
