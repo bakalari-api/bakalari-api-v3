@@ -1,3 +1,7 @@
+[/api](moduly/API%20info.md)
+
+[/api/3](moduly/API%20info.md)
+
 [/api/3/absence/student](moduly/absence.md)
 
 /api/3/classbook
@@ -5,6 +9,8 @@
 [/api/3/events](moduly/events.md)
 
 [/api/3/events/my](moduly/events.md)
+
+[/api/3/events/public](moduly/events.md)
 
 /api/3/gdpr/commissioner
 
@@ -52,6 +58,10 @@
 
 /api/3/komens/rating-templates
 
+[/api/3/login](moduly/web.md)
+
+[/api/3/logintoken](moduly/web.md)
+
 /api/3/marking/atoms
 
 /api/3/marking/marks/$ID
@@ -80,4 +90,4 @@
 
 [/api/3/user](moduly/user.md)
 
-/api/3/webmodule
+[/api/3/webmodule](moduly/web.md)

@@ -16,7 +16,7 @@ Content-Type: application/x-www-form-urlencoded
   "Class":{
     "Id":"XL",
     "Abbrev":"X.A",
-    "Name":"X. A"
+    "Name":"X. A" // nebo také prázdné!
   },
   "FullName":"příjmení jméno, X.A",
   "SchoolOrganizationName":"škola",

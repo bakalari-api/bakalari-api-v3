@@ -4,23 +4,32 @@
 
 Všechny události:
 ```
-GET /api/3/events
+GET /api/3/events (?from=YYYY-MM-dd)
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 Pouze události uživatele:
 ```
-GET /api/3/events/my
+GET /api/3/events/my (?from=YYYY-MM-dd)
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+
+Veřejné události:
+```
+GET /api/3/events/public (?from=YYYY-MM-dd)
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Odpověď
 
-Vrací události z celého školního roku
+S ```from``` vrací události od tohoto data
+Bez ```from``` vrací události z celého školního roku
 
 ```200 OK```
+
 ``` json
 {
    "Events":[
@@ -89,6 +98,42 @@ Vrací události z celého školního roku
 }
 ```
 
+
+
+Přibližně v polovině letních prázdnin začnou servery znepřístupňovat data z minulého roku, oba moduly začnou posílat prázdný seznam. Pokud ale specifikujeme ```from``` parametr (například na 1. září uplynulého školního roku) vrací modul ```my``` sice stále prázdný seznam, ale ```public``` funguje "jako normálně". Jelikož ovšem staré třídy, místnosti a žáci zřejmě neexistují v backendu v použitelné verzi, vrací server tento tvar:
+
+```json
+"Classes":[
+   {
+      "Id":"",
+      "Abbrev":" ()",
+      "Name":" ()"
+   },
+   ...
+],
+"Teachers":[
+   {
+      "Id":"UQBOA",
+      "Abbrev":"FZ",
+      "Name":"Funguje beze změny"
+   },
+   ...
+],
+"Rooms":[
+   {
+      "Id":"",
+      "Abbrev":"",
+      "Name":""
+   },
+   ...
+],
+"Students":[
+  //prázdné, i když zde původně byli
+]
+```
+
+
+
 ## Chyby
 
 při starém / neplatném ACCESS TOKENU
@@ -100,6 +145,24 @@ při POST
 
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'POST'."} ```
+
+při špatně naformátovaném datu
+
+```400 Bad Request```
+``` json
+{
+   "Message":"The request is invalid.",
+   "ModelState":{
+      "$type":"HttpError",
+      "from":{
+         "$type":"String[]",
+         "$values":[
+            "The value 'VADNÝ_DATUM' is not valid for Nullable`1."
+         ]
+      }
+   }
+}
+```
 
 
 

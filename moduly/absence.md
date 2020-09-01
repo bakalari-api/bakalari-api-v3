@@ -10,6 +10,7 @@ GET /api/3/absence/student
 ## Odpověď
 
 Absence podle dní a podle předmětů
+bez oprávnění ```ShowAbsencePercentage``` vrací prázdné ```AbsencesPerSubject```
 
 ```200 OK```
 ``` json
