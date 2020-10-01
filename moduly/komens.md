@@ -89,3 +89,17 @@ GET /api/3/komens/messages/noticeboard/unread
 ```
 Vrací počet komens připnutých k noticeboard.
 Vrací výchozí odpověď.
+
+## Chyby
+
+při starém / neplatném ACCESS TOKENU
+
+```401 Unauthorized```
+```{"Message":"Authorization has been denied for this request."}```
+
+při POST
+
+```405 Method Not Allowed```
+```{"Message":"The requested resource does not support http method 'POST'."} ```
+
+
