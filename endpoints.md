@@ -20,7 +20,7 @@
 
 /api/3/gdpr/commissioner/send-report
 
-/api/3/gdpr/commissioners
+[/api/3/gdpr/commissioners](moduly/gdpr.md)
 
 /api/3/gdpr/consent
 
@@ -76,7 +76,7 @@
 
 [/api/3/marks/measures](moduly/známky%20chování.md)
 
-/api/3/marks/what-if
+[/api/3/marks/what-if](moduly/whatif.md)
 
 /api/3/register-notification
 
