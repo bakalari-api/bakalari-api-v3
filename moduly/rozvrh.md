@@ -76,8 +76,20 @@ Třídní absence je řešená použitím ```Canceled``` parametru
   "TypeName":null
 }
 ```
+```RoomChanged``` - změna místnosti
 
-
+```json
+"Change": {
+  "ChangeSubject": null,
+  "Day": "2020-10-13T00:00:00+02:00",
+  "Hours": "2. hod",
+  "ChangeType": "RoomChanged",
+  "Description": "Změna místnosti: 33 (01)",
+  "Time": "8:55 - 9:40",
+  "TypeAbbrev": null,
+  "TypeName": null
+}
+```
 ## Chyby
 
 při starém / neplatném ACCESS TOKENU
