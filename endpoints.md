@@ -1,3 +1,5 @@
+# Seznam endpointů v Bakaláři API v3
+
 [/api](moduly/API%20info.md)
 
 [/api/3](moduly/API%20info.md)
@@ -18,7 +20,7 @@
 
 /api/3/gdpr/commissioner/send-report
 
-/api/3/gdpr/commissioners
+[/api/3/gdpr/commissioners](moduly/gdpr.md)
 
 /api/3/gdpr/consent
 
@@ -32,29 +34,29 @@
 
 [/api/3/komens/attachment/$ID](moduly/attachment.md)
 
-/api/3/komens/message
+[/api/3/komens/message](moduly/komens.md)
 
-/api/3/komens/message/$ID
+[/api/3/komens/message/$ID](moduly/komens.md)
 
-/api/3/komens/message-types
+[/api/3/komens/message-types](moduly/komens.md)
 
-/api/3/komens/message-types/edit
+[/api/3/komens/message-types/edit](moduly/komens.md)
 
-/api/3/komens/message-types/reply
+[/api/3/komens/message-types/reply](moduly/komens.md)
 
-/api/3/komens/messages/apology
+[/api/3/komens/messages/apology](moduly/komens.md)
 
-/api/3/komens/messages/noticeboard
+[/api/3/komens/messages/noticeboard](moduly/komens.md)
 
-/api/3/komens/messages/noticeboard/unread
+[/api/3/komens/messages/noticeboard/unread](moduly/komens.md)
 
-/api/3/komens/messages/rating
+[/api/3/komens/messages/rating](moduly/komens.md)
 
-/api/3/komens/messages/received
+[/api/3/komens/messages/received](moduly/komens.md)
 
-/api/3/komens/messages/received/unread
+[/api/3/komens/messages/received/unread](moduly/komens.md)
 
-/api/3/komens/messages/sent
+[/api/3/komens/messages/sent](moduly/komens.md)
 
 /api/3/komens/rating-templates
 
@@ -74,7 +76,7 @@
 
 [/api/3/marks/measures](moduly/známky%20chování.md)
 
-/api/3/marks/what-if
+[/api/3/marks/what-if](moduly/whatif.md)
 
 /api/3/register-notification
 

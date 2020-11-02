@@ -2,15 +2,14 @@
 
 ## Požadavek
 ```
-GET /api/3/homeworks (?from=YYYY-MM-dd)
+GET /api/3/homeworks (?from=YYYY-MM-dd) (?to=YYYY-MM-dd)
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Odpověď
 
-Bez ```from``` parametru vrací úkoly 2 měsíce nazpět.
-S ```from``` vrací úkoly od zadaného data do nynějška. Pokud úkol začíná například 1. a končí 10., po vyžádání například 5. se vrátí také, i když začal dříve.
+Parametry `from` a `to` jsou nepovinné. `from` má výchozí hodnotu 14 dní nazpět, `to` jeden den dopředu. Bakaláři poté vrátí všechny úkoly, které byly zadané nebo mají datum odevzdání v tomto rozsahu. Tzn. když `from == to == "2020-10-20"`, tak nedostanete úkol, který byl zadaný 19. 10. a má být odevzdaný 21. 10.
 
 Část odpovědi serveru ze dne 2020-05-05
 
