@@ -28,7 +28,14 @@ Někdy vrací i jméno události ```"DayDescription":"Nový rok"```, ```"Mistr J
 
 Pokud jsou celý týden prázdniny/volno, všechno mimo ```Hours``` je prázdné
 
-Pro data před začátkem aktuálního školního roku vrací 1. týden školy, resp. dny od 1. září. Pokud je 1. září o víkendu, vrací  pro něj hodnotu  ```DayType``` ```Weekend```
+Pro požadavky na data před začátkem aktuálního školního roku vrací 1. školní týden, resp. dny od 1. září.
+
+Pokud je 1. září o víkendu, vrací  pro něj hodnotu  ```"DayType":"Weekend"```
+Pokud je 1. září například v úterý, vrací pouze 4 dny
+
+Na konci školního roku vrací dny až do 31.8. Pro pozdější data opět vrací poslední týden prázdnin
+
+
 
 ### Změny
 
