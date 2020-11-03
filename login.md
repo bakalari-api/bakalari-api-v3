@@ -49,17 +49,26 @@ Pro práci s dalšími endpointy je nezbytné používat tzv. access token pomoc
 Body: `client_id=ANDR&grant_type=refresh_token&refresh_token=REFRESHTOKEN`
 
 Vrací stejnou strukturu body jako při prvním přihlášení.
-Zdá se, že i refresh token asi po měsíci bez obnovy vyprší a je nutné nové přihlášení pomocí hesla
+Zdá se, že i refresh token asi po měsíci bez obnovy vyprší a je nutné nové přihlášení pomocí loginu a hesla
 
 
 
 ## Význam tokenů
 
 Tokeny jsou složeny z jednotlivých částí oddělených tečkami
-```REFRESH``` token je složen z ```ACCESS``` tokenu a další části
 
-první část ```ACCESS```/```REFRESH``` tokenu po dekódování pomocí Base64
 
+první část ```ACCESS_TOKEN``` po dekódování pomocí Base64
+```json
+{
+  "alg":"RSA-OAEP",
+  "enc":"A256CBC-HS512",
+  "kid":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "typ":"at+jwt"
+}
+```
+
+první část ```REFRESH_TOKEN``` po dekódování pomocí Base64
 ```json
 {
    "alg":"RSA-OAEP",
@@ -99,20 +108,66 @@ Body
 
 ## Chyby
 
-Bez ```client_id```, nebo ```grant_type``` dostaneme
+Vždy odpovídá s ```400 Bad Request```
 
+
+Pokus o přihlášení s nesprávnými údaji
+```json
+{
+  "error":"invalid_grant","error_description":"Špatný login nebo heslo"
+}
 ```
+
+
+
+Bez validního ```refresh_token``` je odpovědí následující
+```json
+{
+  "error":"invalid_grant",
+  "error_description":"The specified token is invalid."
+}
+```
+
+
+
+Pro již použitý ```refresh_token``` vrací
+*(Aktuální verze API má v sobě chybu (pokud to tedy není funkce), že jeden refresh token jde použít vícekrát pro získání rozdílných validních párů tokenů. Tato chybová odpověď se začne objevovat až po delší době od první obnovy. K této duplikaci tokenů by ale nemělo docházet, a proto ji prosím nepoužívejte (+není 100% zdokumentovaná) a uchovávejte vždy poslední pár tokenů)*
+
+```json
+{
+  "error":"invalid_grant",
+  "error_description":"The specified refresh token has already been redeemed."
+}
+```
+
+
+
+Při nepoužití ```grant_type```
+```json
+{
+  "error":"invalid_request","error_description":"The mandatory 'grant_type' parameter is missing."
+}
+```
+
+
+
+Při nepoužití ```client_id```
+```json
+{
+  "error":"invalid_client",
+  "error_description":"The mandatory 'client_id' parameter is missing."
+}
+```
+
+
+
+Na starší API bez ```client_id```, nebo ```grant_type``` dostaneme
+```json
 {
   "error": "invalid_client",
   "error_description": "Unknown Client or invalid grant type."
 }
 ```
 
-Bez validního ```refresh_token``` je odpovědí následující:
 
-```
-{
-  "error":"invalid_grant",
-  "error_description":"The specified token is invalid."
-}
-```
+
