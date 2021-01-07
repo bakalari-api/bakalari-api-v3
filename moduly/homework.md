@@ -11,9 +11,60 @@ GET /api/3/homeworks (?from=YYYY-MM-dd) (?to=YYYY-MM-dd)
 
 Parametry `from` a `to` jsou nepovinné. `from` má výchozí hodnotu 14 dní nazpět, `to` jeden den dopředu. Bakaláři poté vrátí všechny úkoly, které byly zadané nebo mají datum odevzdání v tomto rozsahu. Tzn. když `from == to == "2020-10-20"`, tak nedostanete úkol, který byl zadaný 19. 10. a má být odevzdaný 21. 10.
 
-Část odpovědi serveru ze dne 2020-05-05
-
+API ```3.14.0```
 ```200 OK```
+
+```json
+{
+   "Homeworks":[
+      {
+         "ID":"XLBJULQIGG",
+         "DateStart":"2020-11-10T00:00:00+01:00",
+         "DateEnd":"2020-11-11T00:00:00+01:00",
+         "Content":"Text zadaného úkolu/nDokonce ve dvou řádcích/na ještě k tomu s odkazem https://github.com/bakalari-api/bakalari-api-v3",
+         "Notice":"",
+         "Done":true,
+         "Closed":true,
+         "Electronic":false,
+         "Hour":7,
+         "Class":{
+            "Id":"XL",
+            "Abbrev":"X.A",
+            "Name":"X. A"
+         },
+         "Group":{
+            "Id":"BJ",
+            "Abbrev":"Sk",
+            "Name":"Skupina"
+         },
+         "Subject":{
+            "Id":"44",
+            "Abbrev":"Skrtk",
+            "Name":"Předmět"
+         },
+         "Teacher":{
+            "Id":"U5JMC",
+            "Abbrev":"Př",
+            "Name":"Příjmení Jméno"
+         },
+         "Attachments":[
+            {
+               "Id":"xx...xx",
+               "Name":"Soubor.pdf",
+               "Type":"application/pdf",
+               "Size":123456
+            }
+         ],
+         "Finished":false
+      },
+      ...
+  ]
+}  
+```
+
+API ```3.13.0``` a níže
+Navíc existovali parametry ```DateAward```, ```DateControl```, ```DateDone```, pro změnu neexistovalo ```Finished```.
+
 ``` json
 {
   "Homeworks":[
@@ -66,84 +117,12 @@ Parametry `from` a `to` jsou nepovinné. `from` má výchozí hodnotu 14 dní na
 		 ...
       ]
     },
-    {
-      "ID":"XL80UE^IUW",
-      "DateAward":"0001-01-01T00:00:00+01:00",
-      "DateControl":null,
-      "DateDone":"0001-01-01T00:00:00+01:00",
-      "DateStart":"2020-04-29T00:00:00+02:00",
-      "DateEnd":"2020-05-05T00:00:00+02:00",
-      "Content":"Text úkolu",
-      "Notice":"",
-      "Done":true,
-      "Closed":false,
-      "Electronic":false,
-      "Hour":8,
-      "Class":{
-        "Id":"XL",
-        "Abbrev":"X.A",
-        "Name":"X. A"
-      },
-      "Group":{
-        "Id":"80",
-        "Abbrev":"SCvM",
-        "Name":"Seminář a cvičení z matematiky"
-      },
-      "Subject":{
-        "Id":"46",
-        "Abbrev":"SCvM",
-        "Name":"Seminář a cvičení z matematiky"
-      },
-      "Teacher":{
-        "Id":"UAMUL",
-        "Abbrev":"Př",
-        "Name":"Příjmení jméno"
-      },
-      "Attachments":[
-
-      ]
-    },
-	{
-      "ID":"XL0CUDRKUC",
-      "DateAward":"0001-01-01T00:00:00+01:00",
-      "DateControl":null,
-      "DateDone":"0001-01-01T00:00:00+01:00",
-      "DateStart":"2020-03-17T00:00:00+01:00",
-      "DateEnd":"2020-04-30T00:00:00+02:00",
-      "Content":"Text úkolu",
-      "Notice":"",
-      "Done":true,
-      "Closed":true,
-      "Electronic":false,
-      "Hour":10,
-      "Class":{
-        "Id":"XL",
-        "Abbrev":"X.A",
-        "Name":"X. A"
-      },
-      "Group":{
-        "Id":"0C",
-        "Abbrev":"celá",
-        "Name":"celá třída"
-      },
-      "Subject":{
-        "Id":" 3",
-        "Abbrev":"D",
-        "Name":"Dějepis"
-      },
-      "Teacher":{
-        "Id":"UUBP0",
-        "Abbrev":"Př",
-        "Name":"Příjmení jméno"
-      },
-      "Attachments":[
-
-      ]
-    },
 	...
   ]
 }
 ```
+
+
 
 ## Chyby
 

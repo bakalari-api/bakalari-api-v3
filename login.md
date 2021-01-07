@@ -24,7 +24,7 @@ Výsledek requestu:
    "bak:UserId":"XXXXX",
    "access_token":"ACCESSTOKEN - 2556 znaků",
    "refresh_token":"REFRESHTOKEN - 3459 znaků",
-   "id_token":"id_token - 872 znaků",
+   "id_token":"id_token - 872 znaků",  //není vždy dostupné
    "token_type":"Bearer",
    "expires_in":3599,
    "scope":"openid profile offline_access bakalari_api"

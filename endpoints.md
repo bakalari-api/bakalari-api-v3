@@ -1,12 +1,14 @@
 # Seznam endpointů v Bakaláři API v3
 
-[/api](moduly/API%20info.md)
+[/api](moduly/API_info.md)
 
-[/api/3](moduly/API%20info.md)
+[/api/3](moduly/API_info.md)
 
 [/api/3/absence/student](moduly/absence.md)
 
 /api/3/classbook
+
+/api/3/classbook/lessonTags
 
 [/api/3/events](moduly/events.md)
 
@@ -28,9 +30,9 @@
 
 /api/3/gdpr/consents/person/child
 
-[/api/3/homeworks](moduly/úkoly.md)
+[/api/3/homeworks](moduly/homework.md)
 
-[/api/3/homeworks/count-actual](moduly/úkoly%20nové.md)
+[/api/3/homeworks/count-actual](moduly/homework_new.md)
 
 [/api/3/komens/attachment/$ID](moduly/attachment.md)
 
@@ -60,6 +62,8 @@
 
 /api/3/komens/rating-templates
 
+/api/3/lesson/...
+
 [/api/3/login](moduly/web.md)
 
 [/api/3/logintoken](moduly/web.md)
@@ -68,28 +72,38 @@
 
 /api/3/marking/marks/$ID
 
-[/api/3/marks](moduly/známky.md)
+[/api/3/marks](moduly/marks.md)
 
-[/api/3/marks/count-new](moduly/známky%20nové.md)
+[/api/3/marks/count-new](moduly/marks_new.md)
 
-[/api/3/marks/final](moduly/známky%20pololetí.md)
+[/api/3/marks/final](moduly/marks_final.md)
 
-[/api/3/marks/measures](moduly/známky%20chování.md)
+[/api/3/marks/measures](moduly/marks_measures.md)
 
 [/api/3/marks/what-if](moduly/whatif.md)
 
 /api/3/register-notification
 
-[/api/3/subjects](moduly/předměty.md)
+[/api/3/subjects](moduly/subjects.md)
 
-[/api/3/subjects/themes/$ID](moduly/témata.md)
+[/api/3/subjects/themes/$ID](moduly/themes.md)
 
 [/api/3/substitutions](moduly/substitutions.md)
 
-[/api/3/timetable/actual](moduly/rozvrh.md)
+[/api/3/timetable/actual](moduly/timetable.md)
 
-[/api/3/timetable/permanent](moduly/rozvrh.md)
+[/api/3/timetable/permanent](moduly/timetable.md)
+
+/api/3/unregister-user-notification
 
 [/api/3/user](moduly/user.md)
 
 [/api/3/webmodule](moduly/web.md)
+
+
+
+## Další odkazy
+
+[Login](login.md)
+[Seznam škol](school_list.md)
+[Informační kanál](moduly/campaign.md)

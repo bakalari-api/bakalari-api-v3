@@ -22,7 +22,13 @@ Možnosti spolupráce webové verze s aplikací
          "SubMenu":null,
          "Url":"next/dokumentyPrehled.aspx",
          "Name":"Dokumenty"
-      }
+      },
+      {
+         "IconId":"vyukoveZdroje",
+         "SubMenu":null,
+         "Url":"next/TeachingResources.aspx",
+         "Name":"Výukové zdroje"
+      }    
    ],
    "Dashboard":{
       "IconId":null,

@@ -1,6 +1,9 @@
 # Rozvrh
 
+
+
 ## Aktuální rozvrh:
+
 [Příklad běžného rozvrhu](rozvrh_priklady/bezny.json)
 formát data ```YYYY-MM-dd```
 
@@ -10,7 +13,10 @@ GET /api/3/timetable/actual?date=YYYY-MM-dd
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
+
+
 ## Stálý rozvrh:
+
 [Příklad stálého rozvrhu](rozvrh_priklady/staly.json)
 
 ```
@@ -18,6 +24,8 @@ GET /api/3/timetable/permanent
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
+
+
 
 ## Prázdniny
 
@@ -34,6 +42,20 @@ Pokud je 1. září o víkendu, vrací  pro něj hodnotu  ```"DayType":"Weekend"
 Pokud je 1. září například v úterý, vrací pouze 4 dny
 
 Na konci školního roku vrací dny až do 31.8. Pro pozdější data opět vrací poslední týden prázdnin
+
+
+
+### Druhy dnů
+
+známé hodnoty parametru ```Days.DayType```
+
+```
+"WorkDay" 		- pracovní den
+"Weekend" 		- víkend, obvykle se nevyskytuje
+"Celebration" 	- státní státky, významné dny,…
+"Holiday" 		- ostatní prázdniny
+"DirectorDay" 	- ředitelské volno
+```
 
 
 
