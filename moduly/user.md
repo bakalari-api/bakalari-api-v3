@@ -10,20 +10,25 @@ Content-Type: application/x-www-form-urlencoded
 ```
 
 ## Odpověď
+
+API ```3.14.0```
+```200 OK```
+
 ```json
 {
-  "UserUID":"4823/moje_id",
+  "UserUID":"1234/moje_id",
+  "CampaignCategoryCode":"xxxxxxxxxxxxxxx_viz_níže_xxxxxxxxxxxxxxx",
   "Class":{
     "Id":"XL",
     "Abbrev":"X.A",
     "Name":"X. A" // nebo také prázdné!
   },
-  "FullName":"příjmení jméno, X.A",
+  "FullName":"Příjmení Jméno, X.A",
   "SchoolOrganizationName":"škola",
   "SchoolType":null,
   "UserType":"parents",
   "UserTypeText":"rodič",
-  "StudyYear":3,
+  "StudyYear":1,
   "EnabledModules":[
     {
       "Module":"Komens",
@@ -32,7 +37,8 @@ Content-Type: application/x-www-form-urlencoded
         "ShowSentMessages",
         "ShowNoticeBoardMessages",
         "SendMessages",
-        "ShowRatingDetails"
+        "ShowRatingDetails",
+        "SendAttachments"
       ]
     },
     {
@@ -52,6 +58,7 @@ Content-Type: application/x-www-form-urlencoded
       "Module":"Marks",
       "Rights":[
         "ShowMarks",
+        "ShowFinalMarks",
         "PredictMarks"
       ]
     },
@@ -87,6 +94,12 @@ Content-Type: application/x-www-form-urlencoded
         "ShowChildConsents",
         "ShowCommissioners"
       ]
+    },
+    {
+      "Module":"Campaign",
+      "Rights":[
+        "ShowCampaign"
+      ]
     }
   ],
   "SettingModules":{
@@ -102,7 +115,25 @@ Content-Type: application/x-www-form-urlencoded
 }
 ```
 
+
+
+#### Význam ```CampaignCategoryCode```
+
+příklad použití [zde](campaign.md)
+po ```Base64``` dekódování dostaneme tuto strukturu
+
+```json
+{
+  "sid":"1234", //první část UserUID
+  "ut":69,
+  "sy":1        //study year
+}
+```
+
+
+
 ## Chyby
+
 při starém / neplatném ACCESS TOKENU
 ```401 Unauthorized```
 ```{"Message":"Authorization has been denied for this request."}```
