@@ -119,7 +119,7 @@ API ```3.14.0```
 
 #### Význam ```CampaignCategoryCode```
 
-příklad použití [zde](campaign.md)
+příklad použití [zde](../campaign.md)
 po ```Base64``` dekódování dostaneme tuto strukturu
 
 ```json

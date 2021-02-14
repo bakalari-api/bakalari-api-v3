@@ -1,18 +1,18 @@
 # Seznam škol
 
-Toto téma bylo diskutované [zde](https://github.com/bakalari-api/bakalari-api/issues/38)
-
-
+Toto téma bylo diskutováno v [bakalari-api/bakalari-api#38](https://github.com/bakalari-api/bakalari-api/issues/38).
 
 ## Získání seznamu měst
 
 ### Požadavek
+
 ```
 GET https://sluzby.bakalari.cz/api/v1/municipality
 Accept: application/json
 ```
 
 ### Odpověď
+
 ```json
 [
   {
@@ -51,8 +51,6 @@ bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
    ...
 </ArrayOfmunicipalityInfo>
 ```
-
-
 
 ## Seznam škol
 
@@ -120,12 +118,3 @@ bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
   </schools>
 </municipality> 
 ```
-
-
-
-
-
-
-
-
-
