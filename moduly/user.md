@@ -1,6 +1,6 @@
 # User
 
-Vrací informace o uživateli
+Vrací informace o uživateli.
 
 ## Požadavek
 ```
@@ -117,10 +117,11 @@ API ```3.14.0```
 
 
 
-#### Význam ```CampaignCategoryCode```
+### Význam ```CampaignCategoryCode```
 
-příklad použití [zde](../campaign.md)
-po ```Base64``` dekódování dostaneme tuto strukturu
+Používá se u [informačního kanálu (campaign)](../campaign.md).
+
+Po ```Base64``` dekódování dostaneme tuto strukturu:
 
 ```json
 {
@@ -130,11 +131,13 @@ po ```Base64``` dekódování dostaneme tuto strukturu
 }
 ```
 
+Study year se může na mobilu a na webu lišit, [viz #23](https://github.com/bakalari-api/bakalari-api-v3/issues/23).
 
 
 ## Chyby
 
 při starém / neplatném ACCESS TOKENU
+
 ```401 Unauthorized```
 ```{"Message":"Authorization has been denied for this request."}```
 
@@ -143,4 +146,4 @@ při POST
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'POST'."}```
 
-(Je možné, že o velkých prázdninách nebude vracet pololetí a možná ani moduly...)
+(Je možné, že o velkých prázdninách nebude vracet pololetí a možná ani moduly…)
