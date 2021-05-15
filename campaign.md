@@ -1,22 +1,28 @@
-# Informační kanál
+# Informační kanál, reklamy (campaign)
 
-vrací data informačního kanálu
+Vrací data informačního kanálu. Pro více informací [viz #23](https://github.com/bakalari-api/bakalari-api-v3/issues/23).
 
 ```
-GET https://campaign.bakalari.cz/bannerinfo/mobileapp/$CampaignCategoryCode
+GET https://campaign.bakalari.cz/bannerinfo/$Location/$CampaignCategoryCode
 ```
 
-```CampaignCategoryCode``` je hodnota vracená pomocí [user](user.md) modulu
+* `Location` odpovídá platformě a umístění (`mobileapp`, `LargeBanner` nebo `SmallBannersPanel`),
+* `CampaignCategoryCode` je hodnota vracená pomocí [user](moduly/user.md) modulu.
 
 
 
 ## Vrací
 
-dosud nezdokumentováno
-
 ```json
 {
-  "banners":null
+  "banners": [
+    {
+      "messageId": 1049,
+      "imageUrl": "https://www.bakalari.cz/images/kampane/NadaceAlbatros-TalentifyMe-Rodic-340x330.jpg",
+      "linkUrl": "https://www.talentify.me/cs-cz",
+      "priority": 50
+    }
+  ]
 }
 ```
 
