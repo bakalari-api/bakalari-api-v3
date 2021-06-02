@@ -119,6 +119,20 @@ Třídní absence je řešená použitím ```Canceled``` parametru
   "TypeName": null
 }
 ```
+```Substitution``` - Suplování
+
+```json
+"Change": {
+  "ChangeSubject": null,
+  "Day": "2021-06-03T00:00:00+02:00",
+  "Hours": "1. hod",
+  "ChangeType": "Substitution",
+  "Description": "Suplování: Vedral Jaroslav, 211 (Kt, 119A)",
+  Time: "7:45 - 8:30",
+  "TypeAbbrev": null,
+  "TypeName": null
+}
+```
 ## Chyby
 
 při starém / neplatném ACCESS TOKENU
