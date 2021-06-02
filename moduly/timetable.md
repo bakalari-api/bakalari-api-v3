@@ -128,7 +128,7 @@ Třídní absence je řešená použitím ```Canceled``` parametru
   "Hours": "1. hod",
   "ChangeType": "Substitution",
   "Description": "Suplování: Vedral Jaroslav, 211 (Kt, 119A)",
-  Time: "7:45 - 8:30",
+  "Time": "7:45 - 8:30",
   "TypeAbbrev": null,
   "TypeName": null
 }
