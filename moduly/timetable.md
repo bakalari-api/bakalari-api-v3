@@ -55,7 +55,7 @@ známé hodnoty parametru ```Days.DayType```
 "Celebration" 	- státní státky, významné dny,…
 "Holiday" 		- ostatní prázdniny
 "DirectorDay" 	- ředitelské volno
-"Undefined"   - obvykle se nevyskytuje - *nejspíše* indikuje chybu serveru nebo špatně nastavený rozvrh
+"Undefined" 	- obvykle se nevyskytuje - *nejspíše* indikuje chybu serveru nebo špatně nastavený rozvrh
 ```
 
 
