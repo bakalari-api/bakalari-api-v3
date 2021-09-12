@@ -1,5 +1,7 @@
 # Úkoly
 
+Související endpointy: [přílohy](attachment.md), [označování hotových/nehotových úkolů](student-done.md)
+
 ## Požadavek
 ```
 GET /api/3/homeworks (?from=YYYY-MM-dd) (?to=YYYY-MM-dd)
