@@ -6,7 +6,7 @@ POST /api/3/marks/what-if
 "Content-Type: application/json; charset=utf-8"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
-Do těla vkládáme kopii známek předmětu z [/api/3/marks](/moduly/známky.md) podle následující ukázky a poté předvídané známky (mají ID null).
+Do těla vkládáme kopii známek předmětu z [/api/3/marks](/moduly/marks.md) podle následující ukázky a poté předvídané známky (mají ID null).
 ```json
 [
     {
