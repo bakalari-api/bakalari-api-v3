@@ -24,7 +24,8 @@ bez oprávnění ```ShowAbsencePercentage``` vrací prázdné ```AbsencesPerSubj
          "Missed":0,
          "Late":0,
          "Soon":0,
-         "School":0
+         "School":0,
+	 "DistanceTeaching":0
       }
 	  ...
    ],
@@ -35,7 +36,8 @@ bez oprávnění ```ShowAbsencePercentage``` vrací prázdné ```AbsencesPerSubj
          "Base":3,
          "Late":0,
          "Soon":0,
-         "School":0
+         "School":0,
+	 "DistanceTeaching":0
       }
 	  ...
    ]
