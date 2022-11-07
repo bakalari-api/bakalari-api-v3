@@ -12,11 +12,10 @@ Všechny adresy [v seznamu endpointů](endpoints.md) začínají lomítkem. Čá
 
 ## Aplikace postavené na Bakaláři API verze 3
 
-* Průměr Známek - aplikace pro výpočet váženého průměru s možností předvídání známek (funkční offline): [Průměr Známek na Google Play](https://play.google.com/store/apps/details?id=cz.fely.weightedaverage)
-* Lepší Rozvrh - rychlejší klient pro rozvrh (funguje i offline). [Google Play](https://play.google.com/store/apps/details?id=cz.vitskalicky.lepsirozvrh&utm_source=bakalari-api), [GitHub](https://github.com/vitSkalicky/lepsi-rozvrh/)
-* Online token generator - jednoduchý generátor tokenů pro API 1 i API 3 https://ondrovywebovky.cz/token/
-
-Některé další programy a nástroje pracující s tímto API najdete na https://github.com/bakalari-api.
+* Průměr Známek – aplikace pro výpočet váženého průměru s možností předvídání známek (funkční offline): [Průměr Známek na Google Play](https://play.google.com/store/apps/details?id=cz.fely.weightedaverage)
+* Lepší Rozvrh – rychlejší klient pro rozvrh (funguje i offline). [Google Play](https://play.google.com/store/apps/details?id=cz.vitskalicky.lepsirozvrh&utm_source=bakalari-api), [GitHub](https://github.com/vitSkalicky/lepsi-rozvrh/)
+* Online token generator – jednoduchý generátor tokenů pro API v1 i v3: https://ondrovywebovky.cz/token/
+* Java wrapper pro API v3: https://github.com/PanJohnny/Baka4J
 
 ## Kam dál?
 
