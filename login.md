@@ -131,7 +131,7 @@ Bez validního ```refresh_token``` je odpovědí následující
 
 
 Pro již použitý ```refresh_token``` vrací
-*(Aktuální verze API má v sobě chybu (pokud to tedy není funkce), že jeden refresh token jde použít vícekrát pro získání rozdílných validních párů tokenů. Tato chybová odpověď se začne objevovat až po delší době od první obnovy. K této duplikaci tokenů by ale nemělo docházet, a proto ji prosím nepoužívejte (+není 100% zdokumentovaná) a uchovávejte vždy poslední pár tokenů)*
+*(Aktuální verze API má v sobě chybu (pokud to tedy není funkce), že jeden refresh token jde použít vícekrát pro získání rozdílných validních párů tokenů. Tato chybová odpověď se začne objevovat až po čtvrtém requestu se stejným tokenem. Tzn. jdou vygenerovat až 3 access tokeny a 3 refresh tokeny z jednoho refresh tokenu. K této duplikaci tokenů by ale běžně nemělo docházet, a proto ji prosím nepoužívejte (+není 100% zdokumentovaná) a uchovávejte vždy poslední pár tokenů)*
 
 ```json
 {
