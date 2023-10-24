@@ -8,6 +8,7 @@ GET /api/3/subjects/themes/{subject_id}
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
+Případná mezera v `{subject_id}` se nahradí `%20`.
 
 ## Odpověď
 
