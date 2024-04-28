@@ -18,7 +18,7 @@ async function getToken() {
 }
 ```
 
-Adresa školy `url` je vysvětlená v [README](readme.md).  
+Adresa školy `url` je vysvětlená v [README](../README.md).  
 
 Hlavička `head` je slovník, který začíná pro všechny requesty na API s `"Content-Type": "application/x-www-form-urlencoded"`.  
   

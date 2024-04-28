@@ -19,7 +19,7 @@ response = requests.post(url, data=body, headers=head)
 token = response.json()['access_token']
 ```
 
-Adresa školy `url` je vysvětlená v [README](readme.md).  
+Adresa školy `url` je vysvětlená v [README](../README.md).  
   
 Hlavička `head` je `dict`, který začíná pro každý API call začíná s `'Content-Type': 'application/x-www-form-urlencoded'`.  
   
