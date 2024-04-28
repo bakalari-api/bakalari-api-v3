@@ -22,6 +22,7 @@ Všechny adresy [v seznamu endpointů](endpoints.md) začínají lomítkem. Čá
 
 * [**Přihlášení (login)**](login.md)
 * [**Endpointy**](endpoints.md)
+* [**Příklady**](priklady)
 * [Seznam škol](schools_list.md)
 * [Bakaláři API v1](https://github.com/bakalari-api/bakalari-api)
 * [GitHub organizace Bakaláři API](https://github.com/bakalari-api)
