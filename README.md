@@ -17,6 +17,7 @@ Všechny adresy [v seznamu endpointů](endpoints.md) začínají lomítkem. Čá
 * Online token generator – jednoduchý generátor tokenů pro API v1 i v3: https://ondrovywebovky.cz/token/
 * Java wrapper pro API v3: https://github.com/PanJohnny/Baka4J
 * [Plochý rozvrh](https://github.com/Tomsanik/plochy-rozvrh) – snadno dostupný, přehledný a aktuální rozvrh jako součást tapety plochy.
+* Asynchronní API k Bakalářům [async-bakalari-api3](https://github.com/schizza/async-bakalari-api3) ([dokumentace](https://async-bakalari-api.schizza.cz))
 
 ## Kam dál?
 
