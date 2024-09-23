@@ -9,7 +9,7 @@ POST /api/3/komens/message
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-Do těla vstupuje mimo jiné i typ příjemce(ů) a seznam jejich identifikátorů z [komens/message-types](moduly/komens_message-types.md) modulu.
+Do těla vstupuje mimo jiné i typ příjemce(ů) a seznam jejich identifikátorů z [komens/message-types](/moduly/komens_message-types.md) modulu.
 
 Parametry pod atributem `Recipients` jsou nepovinné, ale dokáží ovlivnit zprávu.
 
