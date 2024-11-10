@@ -41,6 +41,9 @@
 * [/api/3/marks/final](moduly/marks_final.md)
 * [/api/3/marks/measures](moduly/marks_measures.md)
 * [/api/3/marks/what-if](moduly/whatif.md)
+* [/api/3/payments/classfund](moduly/payments.md#seznam-plateb)
+* [/api/3/payments/classfund/paymentsinfo](moduly/payments.md#vložit-peníze)
+* [/api/3/payments/classfund/summary](moduly/payments.md#celkový-stav-fondu)
 * /api/3/register-notification
 * [/api/3/subjects](moduly/subjects.md)
 * [/api/3/subjects/themes/$ID](moduly/themes.md)
