@@ -20,6 +20,7 @@
 * [/api/3/komens/attachment/$ID](moduly/attachment.md)
 * [/api/3/komens/message](moduly/komens_send.md)
 * [/api/3/komens/message/$ID](moduly/komens.md)
+* [/api/3/komens/message/$ID/mark-as-read](moduly/komens.md)
 * [/api/3/komens/message-types](moduly/komens_message-types.md)
 * [/api/3/komens/message-types/edit](moduly/komens_message-types.md)
 * [/api/3/komens/message-types/reply](moduly/komens_message-types.md)
@@ -28,6 +29,8 @@
 * [/api/3/komens/messages/noticeboard/unread](moduly/komens.md)
 * [/api/3/komens/messages/rating](moduly/komens.md)
 * [/api/3/komens/messages/received](moduly/komens.md)
+* [/api/3/komens/messages/received/$ID](moduly/komens.md)
+* [/api/3/komens/messages/sent/$ID](moduly/komens.md)
 * [/api/3/komens/messages/received/unread](moduly/komens.md)
 * [/api/3/komens/messages/sent](moduly/komens.md)
 * /api/3/komens/rating-templates
