@@ -14,6 +14,7 @@ Všechny adresy [v seznamu endpointů](endpoints.md) začínají lomítkem. Čá
 
 * Průměr Známek – aplikace pro výpočet váženého průměru s možností předvídání známek (funkční offline): [Průměr Známek na Google Play](https://play.google.com/store/apps/details?id=cz.fely.weightedaverage)
 * Lepší Rozvrh – rychlejší klient pro rozvrh (funguje i offline). [Google Play](https://play.google.com/store/apps/details?id=cz.vitskalicky.lepsirozvrh&utm_source=bakalari-api), [GitLab](https://gitlab.com/vitSkalicky/lepsi-rozvrh/)
+* Pain - další "lepší rozvrh", ale na míru jen pro pár škol: [Web](https://pain.qery.cz), [GitHub](https://github.com/czQery/pain)
 * Online token generator – jednoduchý generátor tokenů pro API v1 i v3: https://ondrovywebovky.cz/token/
 * Java wrapper pro API v3: https://github.com/PanJohnny/Baka4J
 * [Plochý rozvrh](https://github.com/Tomsanik/plochy-rozvrh) – snadno dostupný, přehledný a aktuální rozvrh jako součást tapety plochy.
