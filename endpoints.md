@@ -53,6 +53,7 @@
 * [/api/3/substitutions](moduly/substitutions.md)
 * [/api/3/timetable/actual](moduly/timetable.md)
 * [/api/3/timetable/permanent](moduly/timetable.md)
+* [/Timetable/Public/](moduly/timetable_public.md)
 * /api/3/unregister-user-notification
 * [/api/3/user](moduly/user.md)
 * [/api/3/webmodule](moduly/web.md)
