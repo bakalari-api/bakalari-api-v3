@@ -1,6 +1,6 @@
 # Rozvrh
 
-
+[Dokumentace pro veřejný rozvrh](moduly/timetable_public.md)
 
 ## Aktuální rozvrh:
 
