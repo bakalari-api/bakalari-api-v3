@@ -18,7 +18,18 @@ GET
 
 Není potřeba žádná autorizace nebo speciální headers. Při testování jsem nedostával ani žádné chyby.
 
-Parser v JS, je potřeba stáhnout cheerio a node-fetch pomocí správce balíčků (npm, yarn, ...)
+Parser v JS, je potřeba stáhnout cheerio a node-fetch pomocí správce balíčků
+
+```bash
+# Pro npm
+npm i cheerio node-fetch
+
+#Pro yarn
+yarn add cheerio node-fetch
+
+#Pro pnpm
+pnpm add cheerio node-fetch
+```
 
 App.js
 ```js
