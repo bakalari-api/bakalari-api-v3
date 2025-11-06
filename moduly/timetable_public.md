@@ -1,4 +1,3 @@
-Hej já bych řekl že dobrá dokumentace ne
 # Public timetable
 
 ## !!! TOHLE NEJSOU API KTERÁ BY VRACELA JSON, POUZE HTML API, JE NUTNÉ PARSOVÁNÍ
