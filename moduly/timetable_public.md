@@ -11,10 +11,11 @@ GET
 /Timetable/Public/Permanent/(Teacher, Class, Room)/id
 ```
 
-[Příklad pro HTML pro výběr filtrace](priklady/options.html)
-[Příklad pro HTML pro den v rozvrhu](priklady/day.html)
+[Příklad pro HTML pro výběr filtrace](../priklady/options.html)
 
-[Dokumentace pro osobní rozvrh](moduly/timetable.md)
+[Příklad pro HTML pro den v rozvrhu](../priklady/day.html)
+
+[Dokumentace pro osobní rozvrh](./timetable.md)
 
 Není potřeba žádná autorizace nebo speciální headers. Při testování jsem nedostával ani žádné chyby.
 
