@@ -37,7 +37,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BNMPSLI70(",
           "PointsText":"",
-          "MaxPoints":0
+          "MaxPoints":0,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         },
         { 
           "MarkDate":"2020-02-13T00:00:00+01:00",
@@ -56,7 +59,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BNMVP:T:1N",
           "PointsText":"",
-          "MaxPoints":0
+          "MaxPoints":0,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         },
         {
           "MarkDate":"2020-02-13T00:00:00+01:00",
@@ -75,7 +81,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BNMVP:T:1O",
           "PointsText":"",
-          "MaxPoints":0
+          "MaxPoints":0,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         }
       ],
       "Subject":{
@@ -109,7 +118,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BOYV.N}FF4",
           "PointsText":"",
-          "MaxPoints":100
+          "MaxPoints":100,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         },
         {
           "MarkDate":"2020-02-07T00:00:00+01:00",
@@ -128,7 +140,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BOYD[1O_=V",
           "PointsText":"",
-          "MaxPoints":100
+          "MaxPoints":100,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         },
         {
           "MarkDate":"2020-02-21T00:00:00+01:00",
@@ -147,7 +162,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BOYVG*|:2|",
           "PointsText":"",
-          "MaxPoints":100
+          "MaxPoints":100,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         },
         {
           "MarkDate":"2020-03-06T00:00:00+01:00",
@@ -166,7 +184,10 @@ matematika je příkladem procentuálního / bodového známkování
           "ClassRankText":null,
           "Id":"BOYP9PG6KS",
           "PointsText":"",
-          "MaxPoints":100
+          "MaxPoints":100,
+          "ConfirmedWhen": "2025-09-19T17:52:05+02:00",
+          "ConfirmedBy": "****",
+          "MarkConfirmationState": "Confirmed"
         }
       ],
       "Subject":{
@@ -186,8 +207,6 @@ matematika je příkladem procentuálního / bodového známkování
 }
 ```
 
-
-
 ## Chyby
 
 při starém / neplatném ACCESS TOKENU
@@ -199,4 +218,3 @@ při POST
 
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'POST'."} ```
-
