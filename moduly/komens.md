@@ -52,12 +52,117 @@ Vrací výchozí odpověď.
 
 
 ```
+POST /api/3/komens/messages/sent
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací odeslané komens.
+Vrací výchozí odpověď.
+
+
+```
 POST /api/3/komens/messages/noticeboard
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací komens připnuté k noticeboard.
 Vrací výchozí odpověď.
+
+
+## Dotaz na jednotlivý komens
+
+### Dotazy
+
+```
+GET /api/3/komens/messages/{received/sent}/$ID
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu komens.
+
+### Odpověď
+
+``` json
+{
+  "Message": {
+    "$type": "SentMessageWithRecipientsDetail",
+    "Recipients": [
+      {
+        "RecipientId": "UZYNQ",
+        "UserType": "teacher"
+      }
+    ],
+    "RecipientsProcessed": [
+      {
+        "RecipientId": "UZYNQ",
+        "UserType": "teacher",
+        "ActionDate": "2025-02-23T23:47:07+01:00",
+        "ParentPersons": []
+      }
+    ],
+    "Persons": [
+      {
+        "Id": "UZYNQ",
+        "UserType": "teacher",
+        "PersonId": "UZYNQ",
+        "FirstName": "Jan",
+        "MiddleName": "",
+        "LastName": "Novák",
+        "Degree": "Ing.",
+        "DegreeBehind": "",
+        "ClassAbbreviation": null
+      },
+      {
+        "Id": "AABBCC",
+        "UserType": "student",
+        "PersonId": "GV{OI",
+        "FirstName": "Honza",
+        "MiddleName": null,
+        "LastName": "Vomáčka",
+        "Degree": null,
+        "DegreeBehind": null,
+        "ClassAbbreviation": "4ITB"
+      }
+    ],
+    "Attachments": [],
+    "DateFrom": "2025-02-19T00:00:00+01:00",
+    "DateTo": "2025-02-21T23:59:59+01:00",
+    "CanConfirm": false,
+    "CanAnswer": false,
+    "CanHide": true,
+    "CanDelete": false,
+    "Id": "1234",
+    "Title": "omluvenka: Honza Vomáčka, 1.B",
+    "Text": "<div>HTML encoded zpráva</div>",
+    "SentDate": "2025-02-23T23:46:55+01:00",
+    "Sender": {
+      "Id": "AABBCC",
+      "Type": "student",
+      "Name": "Honza Vomáčka, 1.B"
+    },
+    "Read": true,
+    "LifeTime": "ToConfirm",
+    "Confirmed": true,
+    "Type": "OMLUVENKA",
+    "Hidden": false,
+    "RelevantName": "Ing. Jan Novák",
+    "RelevantPersonType": "teacher"
+  }
+}
+```
+
+
+## Dotaz na označení komens jako přečtené
+
+
+```
+PUT /api/3/komens/message/$ID/mark-as-read
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Nastavuje komens jako přečtený v systému Bakalářů. (Doporučuji zavolat zároveň při získávání detailu zprávy při atributu `Read` na `false`)
+
+Vrací prázdnou HTTP odpověď `204`.
 
 
 ## Dotazy na počet nepřečtených komens
