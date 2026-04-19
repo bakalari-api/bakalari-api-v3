@@ -56,8 +56,8 @@
 * [/Timetable/Public/](moduly/timetable_public.md)
 * /api/3/unregister-user-notification
 * [/api/3/user](moduly/user.md)
-* [/api/3/user](moduly/user.md)
-* [/api/3/webmodule](moduly/student_at_school.md)
+* [/api/3/user/student-at-school](moduly/student_at_school.md)
+* [/api/3/webmodule](moduly/web.md)
 
 ## Další odkazy
 
