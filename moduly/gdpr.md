@@ -1,18 +1,20 @@
 # GDPR
 
-## Požadavek
-```
+## Informace o pověřenci pro ochranu osobních údajů
+
+### Požadavek
+
+```http
 GET /api/3/gdpr/commissioners
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-## Odpověď
+### Odpověď
 
 Informace o pověřenci pro ochranu osobních údajů
 
-```200 OK```
-``` json
+```jsonc
 {
   "Commissioners": [
     {
@@ -22,24 +24,30 @@ Informace o pověřenci pro ochranu osobních údajů
       "Phone": "",
       "Email": "gdpr@gdpr.gdpr",
       "Web": "gdpr.com",
-      "DataBox": ""
-    }
-  ]
+      "DataBox": "",
+    },
+  ],
 }
 ```
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{"Invalid token request."}
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
 
+```http
+405 Method Not Allowed
+```
 
-
-
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

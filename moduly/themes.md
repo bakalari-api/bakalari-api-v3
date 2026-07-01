@@ -1,55 +1,64 @@
 # Témata
 
-vrací seznam hodin a jejich témata za celý školní rok v daném předmětu
+Vrací seznam hodin a jejich témata za celý školní rok v daném předmětu.
 
 ## Požadavek
-```
+
+```http
 GET /api/3/subjects/themes/{subject_id}
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Případná mezera v `{subject_id}` se nahradí `%20`.
+
+`subject_id` je URL-kódované.
 
 ## Odpověď
 
-```200 OK```
-``` json
+```jsonc
 {
-   "Subject":{
-      "Id":"28",
-      "Abbrev":"ČJL",
-      "Name":"Český jazyk a literatura"
-   },
-   "Themes":[
-      {
-         "Date":"2019-09-03T00:00:00+02:00",
-         "Theme":"Světový realismus",
-         "Note":"",
-         "HourCaption":"1. hod",
-         "LessonLabel":"1"
-      },
-      {
-         "Date":"2019-09-05T00:00:00+02:00",
-         "Theme":"D a VJR",
-         "Note":"",
-         "HourCaption":"6. hod",
-         "LessonLabel":"2"
-      },
-	  ...
-	]
+  "Subject": {
+    "Id": "28",
+    "Abbrev": "ČJL",
+    "Name": "Český jazyk a literatura",
+  },
+  "Themes": [
+    {
+      "Date": "2019-09-03T00:00:00+02:00",
+      "Theme": "Světový realismus",
+      "Note": "",
+      "HourCaption": "1. hod",
+      "LessonLabel": "1",
+    },
+    {
+      "Date": "2019-09-05T00:00:00+02:00",
+      "Theme": "D a VJR",
+      "Note": "",
+      "HourCaption": "6. hod",
+      "LessonLabel": "2",
+    },
+    // ...
+  ],
 }
 ```
 
-
-
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
+
+```http
+405 Method Not Allowed
+```
+
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

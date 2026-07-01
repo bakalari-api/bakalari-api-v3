@@ -1,108 +1,119 @@
-# Web
+# Web - možnosti webu školy
 
-## Možnosti webu školy
-## Požadavek
+Tento modul v podstatě slouží jako taková sonda, která ukazuje, co má server
+nastavené a zapnuté: jaké moduly jsou povolené, jaká nastavení jsou zapnutá,
+atd.
 
-```
+## Možnosti spolupráce webové verze s aplikací
+
+### Požadavek
+
+```http
 GET /api/3/webmodule
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-## Odpověď
+### Odpověď
 
-Možnosti spolupráce webové verze s aplikací
+```http
+200 OK
+```
 
-```200 OK```
-``` json
+```jsonc
 {
-   "WebModules":[
-      {
-         "IconId":"dokumenty",
-         "SubMenu":null,
-         "Url":"next/dokumentyPrehled.aspx",
-         "Name":"Dokumenty"
-      },
-      {
-         "IconId":"vyukoveZdroje",
-         "SubMenu":null,
-         "Url":"next/TeachingResources.aspx",
-         "Name":"Výukové zdroje"
-      }    
-   ],
-   "Dashboard":{
-      "IconId":null,
-      "SubMenu":null,
-      "Url":"next/dash.aspx",
-      "Name":null
-   }
+  "WebModules": [
+    {
+      "IconId": "dokumenty",
+      "SubMenu": null,
+      "Url": "next/dokumentyPrehled.aspx",
+      "Name": "Dokumenty",
+    },
+    {
+      "IconId": "vyukoveZdroje",
+      "SubMenu": null,
+      "Url": "next/TeachingResources.aspx",
+      "Name": "Výukové zdroje",
+    },
+  ],
+  "Dashboard": {
+    "IconId": null,
+    "SubMenu": null,
+    "Url": "next/dash.aspx",
+    "Name": null,
+  },
 }
 ```
-
-
 
 ## Přihlášení do prohlížeče přes token
 
 ### Získání tokenu
 
-## Požadavek
+#### Požadavek
 
-```
+```http
 GET /api/3/logintoken
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-## Odpověď
+#### Odpověď
 
-Jednorázový token pro autorizaci na webu bakalářů - ```LOGIN_TOKEN```
+Jednorázový token pro autorizaci na webu bakalářů; login token.
 
-```200 OK```
+```http
+200 OK
+```
 
-``` json
+```jsonc
 "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
-
+<!-- TODO: tohle mi přijde redundantní. Možná odebrat?
+-->
 
 ### Přihlášení
 
-## Požadavek
+#### Požadavek
 
-```
+```http
 GET /api/3/login/LOGIN_TOKEN?returnUrl=next/dash.aspx
 ```
 
-## Odpověď
+#### Odpověď
 
-Úspěšné přihlášení vrací v header ```Location``` požadované umístění
+Úspěšné přihlášení vrací v hlavičce `Location` požadované umístění
 
-```302 Found```
-```
+```http
+302 Found
 Location: /next/dash.aspx
 ```
 
-Neúspěšné přihlášení vrací adresu přihlašovací stránky
+Neúspěšné přihlášení vrací adresu přihlašovací stránky.
 
-```302 Found```
-```
+```http
+302 Found
 Location: /login?ReturnUrl=next/dash.aspx
 ```
 
+#### Chyby
 
+##### Neplatný access token
 
+```http
+401 Unauthorized
+```
 
-## Chyby
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-při starém / neplatném ACCESS TOKENU
+##### Neplatná metoda
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+405 Method Not Allowed
+```
 
-při POST
-
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
-
-
-
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

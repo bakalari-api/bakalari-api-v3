@@ -1,31 +1,46 @@
 # Nové známky
 
-## Požadavek
-```
+## Počet nových známek
+
+### Požadavek
+
+```http
 GET /api/3/marks/count-new
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-## Odpověď
-vrací počet nových známek jako číslo
+### Odpověď
 
-Zatím pokaždé vrátilo nulu, zkoušel jsem i před zobrazením známky v aplikaci, zřejmě bude nenulová pouze před zobrazením push notifikace.
+Zatím pokaždé vrátilo nulu, zkoušel jsem i před zobrazením známky v aplikaci,
+zřejmě bude nenulová pouze před zobrazením push notifikace.
 
-```200 OK```
-```0```
+```http
+200 OK
+```
 
-## Chyby
+```
+0
+```
 
-při starém / neplatném ACCESS TOKENU
+### Chyby
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+#### Neplatný access token
 
-při POST
+```http
+401 Unauthorized
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
+#### Neplatná metoda
 
+```http
+405 Method Not Allowed
+```
 
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

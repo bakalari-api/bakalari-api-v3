@@ -4,13 +4,14 @@
 
 ### Odpověď
 
-Veškeré otázky, které vracejí nějaký seznam komens, je vrací v tomto formátu.
+Veškeré otázky, které vracejí nějaký seznam komens, je vrací v tomto
+formátu.
 
-``` json
+```jsonc
 {
   "Messages": [
     {
-      "$type": "GeneralMessage",
+      "$type": "GeneralMessage", // viz. poznámka
       "Id": "1234",
       "Title": "Obecná zpráva",
       "Text": "<div>HTML encoded zpráva</div>",
@@ -18,7 +19,7 @@ Veškeré otázky, které vracejí nějaký seznam komens, je vrací v tomto for
       "Sender": {
         "Id": "UZYNQ",
         "Type": "administrator",
-        "Name": "Jan Novák (ředitelství)"
+        "Name": "Jan Novák (ředitelství)",
       },
       "Attachments": [],
       "Read": true,
@@ -27,78 +28,83 @@ Veškeré otázky, které vracejí nějaký seznam komens, je vrací v tomto for
       "DateTo": null,
       "Confirmed": true,
       "CanConfirm": false,
-      "Type": "OBECNA",
+      "Type": "OBECNA", // viz. poznámka
       "CanAnswer": true,
       "Hidden": false,
       "CanHide": true,
       "RelevantName": "ředitelství",
-      "RelevantPersonType": "administrator"
-    }
-  ]
+      "RelevantPersonType": "administrator",
+    },
+  ],
 }
 ```
+
+> [!NOTE]
+> Pozorný čtenář/čtenářka si všimne, že objekt má vlastnost `Type` a také
+> vlastnost `$type`. Toto se zdá být relikvií z minulosti; Bakaláři jsou starý
+> systém a tak se po nějaké době začnou objevovat takovéto věci. Podle mého
+> pozorování by měla obě pole obsahovat stejnou informaci, jen napsanou jinak.
 
 ### Dotazy
 
 Bakaláři podporují tyto seznamy komens.
 
-```
+#### Přijaté zprávy
+
+```http
 POST /api/3/komens/messages/received
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Vrací přijaté komens.
-Vrací výchozí odpověď.
 
+#### Odeslané zprávy
 
-```
+```http
 POST /api/3/komens/messages/sent
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Vrací odeslané komens.
-Vrací výchozí odpověď.
 
+#### Zprávy připnuté na nástěnce
 
-```
+```http
 POST /api/3/komens/messages/noticeboard
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Vrací komens připnuté k noticeboard.
-Vrací výchozí odpověď.
-
 
 ## Dotaz na jednotlivý komens
 
-### Dotazy
+### Požadavek
 
+```http
+GET /api/3/komens/messages/{received,sent}/$ID
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-GET /api/3/komens/messages/{received/sent}/$ID
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
-```
-Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu komens.
+
+Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu
+komens.
 
 ### Odpověď
 
-``` json
+```jsonc
 {
   "Message": {
     "$type": "SentMessageWithRecipientsDetail",
     "Recipients": [
       {
         "RecipientId": "UZYNQ",
-        "UserType": "teacher"
-      }
+        "UserType": "teacher",
+      },
     ],
     "RecipientsProcessed": [
       {
         "RecipientId": "UZYNQ",
         "UserType": "teacher",
         "ActionDate": "2025-02-23T23:47:07+01:00",
-        "ParentPersons": []
-      }
+        "ParentPersons": [],
+      },
     ],
     "Persons": [
       {
@@ -110,7 +116,7 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
         "LastName": "Novák",
         "Degree": "Ing.",
         "DegreeBehind": "",
-        "ClassAbbreviation": null
+        "ClassAbbreviation": null,
       },
       {
         "Id": "AABBCC",
@@ -121,8 +127,8 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
         "LastName": "Vomáčka",
         "Degree": null,
         "DegreeBehind": null,
-        "ClassAbbreviation": "4ITB"
-      }
+        "ClassAbbreviation": "4ITB",
+      },
     ],
     "Attachments": [],
     "DateFrom": "2025-02-19T00:00:00+01:00",
@@ -138,7 +144,7 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
     "Sender": {
       "Id": "AABBCC",
       "Type": "student",
-      "Name": "Honza Vomáčka, 1.B"
+      "Name": "Honza Vomáčka, 1.B",
     },
     "Read": true,
     "LifeTime": "ToConfirm",
@@ -146,65 +152,72 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
     "Type": "OMLUVENKA",
     "Hidden": false,
     "RelevantName": "Ing. Jan Novák",
-    "RelevantPersonType": "teacher"
-  }
+    "RelevantPersonType": "teacher",
+  },
 }
 ```
 
+## Označení zprávy jako přečtené
 
-## Dotaz na označení komens jako přečtené
+### Požadavek
 
-
-```
+```http
 PUT /api/3/komens/message/$ID/mark-as-read
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Nastavuje komens jako přečtený v systému Bakalářů. (Doporučuji zavolat zároveň při získávání detailu zprávy při atributu `Read` na `false`)
 
-Vrací prázdnou HTTP odpověď `204`.
-
-
-## Dotazy na počet nepřečtených komens
-
+Nastavuje komens jako přečtený v systému Bakalářů. (Doporučuji zavolat
+zároveň při získávání detailu zprávy při atributu `Read` na `false`)
 
 ### Odpověď
 
-Vrací počet nepřečtených komens v daném seznamu.
-
-``` json
-0
+```http
+204 No Content
 ```
 
-### Dotazy
+## Dotazy na počet nepřečtených komens
 
-```
+### Odpověď
+
+Odpovědi jsou prosté číslo.
+
+### Požadavky
+
+#### Počet nepřečtených zpráv
+
+```http
 GET /api/3/komens/messages/received/unread
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Vrací počet přijatých komens.
-Vrací výchozí odpověď.
 
+#### Počet nepřečtených zpráv připlých na nástěnce
 
-```
+```http
 GET /api/3/komens/messages/noticeboard/unread
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
-Vrací počet komens připnutých k noticeboard.
-Vrací výchozí odpověď.
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
 
+```http
+405 Method Not Allowed
+```
 
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

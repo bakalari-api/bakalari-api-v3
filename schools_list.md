@@ -1,37 +1,38 @@
 # Seznam škol
 
-Toto téma bylo diskutováno v [bakalari-api/bakalari-api#38](https://github.com/bakalari-api/bakalari-api/issues/38).
+Toto téma bylo diskutováno v
+[bakalari-api/bakalari-api#38](https://github.com/bakalari-api/bakalari-api/issues/38).
 
 ## Získání seznamu měst
 
 ### Požadavek
 
-```
+```http
 GET https://sluzby.bakalari.cz/api/v1/municipality
 Accept: application/json
 ```
 
 ### Odpověď
 
-```json
+```jsonc
 [
   {
     "name": "",
-    "schoolCount": 2
+    "schoolCount": 2,
   },
   {
     "name": "Albrechtice",
-    "schoolCount": 1
+    "schoolCount": 1,
   },
   {
     "name": "Aš",
-    "schoolCount": 3
+    "schoolCount": 3,
   },
-  ...
+  // ...
 ]
 ```
 
-bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
+Bez `Accept: application/json` vrací stejná data, jen v XML struktuře.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,7 +49,7 @@ bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
       <name>Aš</name>
       <schoolCount>3</schoolCount>
    </municipalityInfo>
-   ...
+   <!-- ... -->
 </ArrayOfmunicipalityInfo>
 ```
 
@@ -56,43 +57,44 @@ bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
 
 ### Požadavek
 
-```
+```http
 GET https://sluzby.bakalari.cz/api/v1/municipality/$mesto
 Accept: application/json
 ```
 
-Parametr ```mesto``` musí být správně URL encoded, například
-Benešov u Prahy → Bene%C5%A1ov%20u%20Prahy
+Parametr `mesto` musí být správně URL encoded, například Benešov u Prahy by byl
+`Bene%C5%A1ov%20u%20Prahy`
 
-U měst s tečkou ve jméně (*např.: Ostrava-Mar.Hory*) server vrací ```404```, pro platnou odpověď je nutno použít pouze část před tečkou (*Ostrava-Mar*)
+U měst s tečkou ve jméně (_např.: Ostrava-Mar.Hory_) server vrací `404`,
+pro platnou odpověď je nutno použít pouze část před tečkou (_Ostrava-Mar_)
 
 ### Odpověď
 
-```json
+```jsonc
 {
   "name": "beroun",
   "schools": [
     {
       "id": "SYHKTAAAAB",
       "name": "Mateřská škola Montessori Beroun a Základní škola s.r.o.",
-      "schoolUrl": "https://montessori-beroun.bakalari.cz"
+      "schoolUrl": "https://montessori-beroun.bakalari.cz",
     },
     {
       "id": "SYDATAAABA",
       "name": "Základní škola, Beroun - Závodí, Komenského 249",
-      "schoolUrl": "https://zavodi.bakalari.cz"
+      "schoolUrl": "https://zavodi.bakalari.cz",
     },
     {
       "id": "SYDATAADKO",
       "name": "Manažerská akademie, soukromá střední škola",
-      "schoolUrl": "https://maberoun.bakalari.cz/"
+      "schoolUrl": "https://maberoun.bakalari.cz/",
     },
-    ...
-  ]
+    // ...
+  ],
 }
 ```
 
-bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
+Bez hlavičky `Accept: application/json` vrací stejná data, jen v XML struktuře.
 
 ```xml
 <municipality
@@ -114,7 +116,7 @@ bez ```Accept: application/json``` vrací stejná data, jen ve XML struktuře
       <name>Manažerská akademie, soukromá střední škola</name>
       <schoolUrl>https://maberoun.bakalari.cz/</schoolUrl>
     </schoolInfo>
-    ... 
+    <!-- ... -->
   </schools>
-</municipality> 
+</municipality>
 ```

@@ -1,29 +1,43 @@
 # Nové úkoly
 
+## Počet otevřených úkolů
 
-## Požadavek
-```
+### Požadavek
+
+```http
 GET /api/3/homeworks/count-actual
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
+### Odpověď
 
-## Odpověď
-vrací počet úkolů s hodnotou ```"Closed":false```
+Vrací počet úkolů s hodnotou `"Closed":false`
 
-```200 OK```
-```6```
+```http
+200 OK
+```
 
+`6`
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
+
+```http
+405 Method Not Allowed
+```
+
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

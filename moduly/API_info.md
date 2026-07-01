@@ -1,48 +1,51 @@
 # API info
 
-## Požadavek
-```
+## Přehled všech dostupných API verzí
+
+### Požadavek
+
+```http
 GET /api
 ```
 
-## Odpověď
+### Odpověď
 
-Přehled všech dostupných API verzí
-
-```200 OK```
-``` json
-[{"ApiVersion":"3.12.0","ApplicationVersion":"1.32.625.2","BaseUrl":"api/3"}]
+```jsonc
+[
+  {
+    "ApiVersion": "3.12.0",
+    "ApplicationVersion": "1.32.625.2",
+    "BaseUrl": "api/3",
+  },
+]
 ```
 
+## Informace o API
 
+### Požadavek
 
-## Požadavek
-
-```
+```http
 GET /api/3
 ```
 
-## Odpověď
+### Odpověď
 
-Informace o API (v tomto případě verze 3)
-
-```200 OK```
-``` json
-{"ApiVersion":"3.12.0","ApplicationVersion":"1.32.625.2","BaseUrl":"api/3"}
+```jsonc
+{
+  "ApiVersion": "3.12.0",
+  "ApplicationVersion": "1.32.625.2",
+  "BaseUrl": "api/3",
+}
 ```
-
-
 
 ## Chyby
 
-při POST
+### Chybná metoda
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+```http
+405 Method Not Allowed
+```
 
-
-
-
-
-
-
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

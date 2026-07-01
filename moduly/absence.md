@@ -1,61 +1,67 @@
 # Absence
 
 ## Požadavek
-```
+
+```http
 GET /api/3/absence/student
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
 ## Odpověď
 
-Absence podle dní a podle předmětů
-bez oprávnění ```ShowAbsencePercentage``` vrací prázdné ```AbsencesPerSubject```
+Absence podle dní a podle předmětů bez oprávnění `ShowAbsencePercentage` vrací
+prázdné `AbsencesPerSubject`
 
-```200 OK```
-``` json
+```jsonc
 {
-   "PercentageThreshold":0.18,
-   "Absences":[
-      {
-         "Date":"2020-02-30T00:00:00+01:00",
-         "Unsolved":0,
-         "Ok":5,
-         "Missed":0,
-         "Late":0,
-         "Soon":0,
-         "School":0,
-	 "DistanceTeaching":0
-      }
-	  ...
-   ],
-   "AbsencesPerSubject":[
-      {
-         "SubjectName":"Český jazyk a literatura",
-         "LessonsCount":18,
-         "Base":3,
-         "Late":0,
-         "Soon":0,
-         "School":0,
-	 "DistanceTeaching":0
-      }
-	  ...
-   ]
+  "PercentageThreshold": 0.18,
+  "Absences": [
+    {
+      "Date": "2020-02-30T00:00:00+01:00",
+      "Unsolved": 0,
+      "Ok": 5,
+      "Missed": 0,
+      "Late": 0,
+      "Soon": 0,
+      "School": 0,
+      "DistanceTeaching": 0,
+    },
+    /// ...
+  ],
+  "AbsencesPerSubject": [
+    {
+      "SubjectName": "Český jazyk a literatura",
+      "LessonsCount": 18,
+      "Base": 3,
+      "Late": 0,
+      "Soon": 0,
+      "School": 0,
+      "DistanceTeaching": 0,
+    },
+    // ...
+  ],
 }
 ```
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Chybná metoda
 
+```http
+405 Method Not Allowed
+```
 
-
-
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

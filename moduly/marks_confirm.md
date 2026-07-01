@@ -3,38 +3,61 @@
 Podepíše zvolené známky.
 
 ## Požadavek
-```
+
+```http
 POST /api/3/marks/SetClassificationConfirmation
-"Content-Type: application/json"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/json
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-do těla je nutné poslat seznam `ID` předmětů k podepsání ve formě `list`
+Do těla je nutné poslat seznam `ID` předmětů k podepsání ve formě `list`
 
-```json
-["01YE)R1-5Q","01YE)R1-7V", ...]
+```jsonc
+["01YE)R1-5Q", "01YE)R1-7V" /* ... */]
 ```
 
 ## Odpověď
-Vrací 
 
-Vrací prázdnou odpověď ```200``` při úspěchu.
-Vrací prázdnou odpověď ```204``` pokud "nic" neproběhlo (známky byly již podepsány)
+### Úspěch
 
+```http
+200 OK
+```
+
+### Známky jsou již podepsané
+
+```http
+204 No Content
+```
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU:
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při použití GET/PUT:
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
 
-Pokud chybí tělo requestu ve formátu `list`:
+```http
+405 Method Not Allowed
+```
 
-```500```
-```{'Message': 'An error has occurred.'}```
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```
+
+### Chybějící či neplatné tělo
+
+```http
+500 Internal Server Error
+```
+
+```jsonc
+{ "Message": "An error has occurred." }
+```

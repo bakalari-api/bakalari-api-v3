@@ -1,50 +1,62 @@
 # User
 
-Vrací informace o lokaci žáka.
+## Informace o lokaci žáka
 
-## Požadavek
-```
+### Požadavek
+
+```http
 GET /api/3/user/student-at-school
 Content-Type: application/x-www-form-urlencoded
-"Authorization: Bearer ACCESS_TOKEN"
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-## Odpověď
+### Odpověď
 
-API ```3.43.0```
-```200 OK```
+<details>
+    <summary>API <code>3.43.0</code></summary>
 
-```json
+```jsonc
 false
 ```
 
-Vrací bool
+</details>
 
 ## Přístupový systém
-Školní server musí mít modul [Přístupový systém](https://napoveda.bakalari.cz/index.html?wa_pristsys.htm)
+
+Školní server musí mít modul [Přístupový
+systém](https://napoveda.bakalari.cz/index.html?wa_pristsys.htm)
 
 [user.md](moduly/user.md)
-```json
+
+```jsonc
 {
   "EnabledModules": [
     {
       "Module": "AccessSystem",
-      "Rights": [
-        "CanShowStudentPresentAtSchool"
-      ]
-    }
-  ]
+      "Rights": ["CanShowStudentPresentAtSchool"],
+    },
+  ],
 }
 ```
 
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."}```
+### Neplatná metoda
+
+```http
+405 Method Not Allowed
+```
+
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```

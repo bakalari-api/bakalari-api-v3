@@ -1,19 +1,21 @@
 # Vysvědčení
 
-všechny vysvědčení od začátku studia
+Všechna vysvědčení od začátku studia.
 
 ## Požadavek
 
-```
+```http
 GET /api/3/marks/final
-"Content-Type: application/x-www-form-urlencoded"
-"Authorization: Bearer ACCESS_TOKEN"
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer ACCESS_TOKEN
 ```
 
 ## Odpověď
 
-```200 OK```
-```json
+<details>
+    <summary>Tělo odpovědi</summary>
+
+```jsonc
 {
   "CertificateTerms":[
     {
@@ -39,7 +41,7 @@ GET /api/3/marks/final
           "SubjectId":"10",
           "Id":"O1097"
         },
-        ...
+        // ...
       ],
       "Subjects":[
         {
@@ -57,7 +59,7 @@ GET /api/3/marks/final
           "Abbrev":"M",
           "Name":"Matematika"
         },
-		...
+		// ...
       ],
       "GradeName":"první",
       "Grade":1,
@@ -96,7 +98,7 @@ GET /api/3/marks/final
           "SubjectId":"10",
           "Id":"O1098"
         },
-		...
+		// ...
       ],
       "Subjects":[
         {
@@ -114,7 +116,7 @@ GET /api/3/marks/final
           "Abbrev":"M",
           "Name":"Matematika"
         },
-		...
+		// ...
       ],
       "GradeName":"první",
       "Grade":1,
@@ -153,7 +155,7 @@ GET /api/3/marks/final
           "SubjectId":"10",
           "Id":"BO0QC"
         },
-        ...
+        // ...
       ],
       "Subjects":[
         {
@@ -171,7 +173,7 @@ GET /api/3/marks/final
           "Abbrev":"M",
           "Name":"Matematika"
         },
-        ...
+        // ...
       ],
       "GradeName":"druhý",
       "Grade":2,
@@ -210,7 +212,7 @@ GET /api/3/marks/final
           "SubjectId":"10",
           "Id":"BO0QD"
         },
-		...
+		// ...
       ],
       "Subjects":[
         {
@@ -228,7 +230,7 @@ GET /api/3/marks/final
           "Abbrev":"M",
           "Name":"Matematika"
         },
-		...
+		// ...
       ],
       "GradeName":"druhý",
       "Grade":2,
@@ -267,7 +269,7 @@ GET /api/3/marks/final
           "SubjectId":"10",
           "Id":"VI210"
         },
-		...
+		// ...
       ],
       "Subjects":[
         {
@@ -285,7 +287,7 @@ GET /api/3/marks/final
           "Abbrev":"M",
           "Name":"Matematika"
         },
-		...
+		// ...
       ],
       "GradeName":"třetí",
       "Grade":3,
@@ -305,17 +307,26 @@ GET /api/3/marks/final
 }
 ```
 
+</details>
+
 ## Chyby
 
-při starém / neplatném ACCESS TOKENU
+### Neplatný access token
 
-```401 Unauthorized```
-```{"Message":"Authorization has been denied for this request."}```
+```http
+401 Unauthorized
+```
 
-při POST
+```jsonc
+{ "Message": "Authorization has been denied for this request." }
+```
 
-```405 Method Not Allowed```
-```{"Message":"The requested resource does not support http method 'POST'."} ```
+### Neplatná metoda
 
+```http
+405 Method Not Allowed
+```
 
-
+```jsonc
+{ "Message": "The requested resource does not support http method 'POST'." }
+```
