@@ -1,5 +1,14 @@
 # GDPR
 
+## Nové souhlasy
+
+```
+GET /api/3/gdpr/consents/person/new
+"Authorization: Bearer ACCESS_TOKEN"
+```
+
+Vrací celé číslo; v zachycené odpovědi byla hodnota `0`.
+
 ## Požadavek
 ```
 GET /api/3/gdpr/commissioners
@@ -39,7 +48,6 @@ při POST
 
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'POST'."} ```
-
 
 
 

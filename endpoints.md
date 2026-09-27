@@ -3,8 +3,9 @@
 * [/api](moduly/API_info.md)
 * [/api/3](moduly/API_info.md)
 * [/api/3/absence/student](moduly/absence.md)
-* /api/3/classbook
-* /api/3/classbook/lessonTags
+* [/api/3/classbook](moduly/classbook.md)
+* [/api/3/classbook/$ID](moduly/classbook.md#zapsání-hodiny)
+* [/api/3/classbook/lessonTags](moduly/classbook.md#štítky-hodin)
 * [/api/3/events](moduly/events.md)
 * [/api/3/events/my](moduly/events.md)
 * [/api/3/events/public](moduly/events.md)
@@ -15,6 +16,7 @@
 * /api/3/gdpr/consent
 * /api/3/gdpr/consents/person
 * /api/3/gdpr/consents/person/child
+* [/api/3/gdpr/consents/person/new](moduly/gdpr.md#nové-souhlasy)
 * [/api/3/homeworks](moduly/homework.md)
 * [/api/3/homeworks/count-actual](moduly/homework_new.md)
 * [/api/3/komens/attachment/$ID](moduly/attachment.md)
@@ -34,7 +36,9 @@
 * [/api/3/komens/messages/received/unread](moduly/komens.md)
 * [/api/3/komens/messages/sent](moduly/komens.md)
 * /api/3/komens/rating-templates
-* /api/3/lesson/...
+* [/api/3/lesson/$ID/absence](moduly/lesson.md#absence-v-hodině)
+* [/api/3/lesson/$ID/past](moduly/lesson.md#poslední-probírané-téma)
+* [/api/3/lesson/$ID/studentsTimetable](moduly/lesson.md#rozvrh-skupin-hodiny)
 * [/api/3/login](moduly/web.md)
 * [/api/3/logintoken](moduly/web.md)
 * /api/3/marking/atoms
