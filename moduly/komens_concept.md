@@ -12,7 +12,7 @@ Post /api/3/komens/concept
 
 ## Tělo
 
-```3.52.1``` ```200 OK```
+```3.52.1```
 ``` jsonc
 {
   "ConceptData": {
