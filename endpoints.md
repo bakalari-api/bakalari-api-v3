@@ -20,6 +20,9 @@
 * [/api/3/homeworks](moduly/homework.md)
 * [/api/3/homeworks/count-actual](moduly/homework_new.md)
 * [/api/3/komens/attachment/$ID](moduly/attachment.md)
+* /api/3/komens/concepts/
+* /api/3/komens/concepts/count
+* /api/3/komens/concepts/$ID
 * [/api/3/komens/message](moduly/komens_send.md)
 * [/api/3/komens/message/$ID](moduly/komens.md)
 * [/api/3/komens/message/$ID/mark-as-read](moduly/komens.md)
