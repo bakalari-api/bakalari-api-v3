@@ -2,6 +2,8 @@
 
 ## Počet konceptů
 
+Získá počet konceptů uživatele
+
 ## Požadavek
 ```
 Get /api/3/komens/concepts/count

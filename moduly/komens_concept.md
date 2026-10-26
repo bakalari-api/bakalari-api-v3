@@ -2,6 +2,8 @@
 
 ## Nový koncept
 
+Uloží nový koncept (Rozepsaná komens Zprava)
+
 ## Požadavek
 ```
 Post /api/3/komens/concept
@@ -22,7 +24,7 @@ Post /api/3/komens/concept
     "Text": "<p>text</p>",
     "RecipientType": "U",
     "Recipients": ["ABCDE"],
-    "LifeTime": null,
+    "LifeTime": null, //nullable Enum "ToConfirm", "ToRead", "ToRemoval", "Validity"
     "DateFrom": null,
     "DateTo": null,
     "PreviousMessageId": null,
@@ -62,7 +64,9 @@ při GET
 ```405 Method Not Allowed```
 ```{"Message":"The requested resource does not support http method 'GET'."} ```
 
-## Koncept
+## Získá koncept
+
+Získá koncept podle ID
 
 ## Požadavek
 ```
@@ -93,7 +97,7 @@ Get /api/3/komens/concept/$ID
       "Type": "student",
       "Name": "Jan Novak"
     },
-    "LifeTime": "ToRead",
+    "LifeTime": "ToRead", //nullable Enum "ToConfirm", "ToRead", "ToRemoval", "Validity"
     "MessageType": "OBECNA",
     "DateFrom": null,
     "DateTo": null,

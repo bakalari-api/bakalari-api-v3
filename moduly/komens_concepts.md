@@ -1,6 +1,8 @@
 # Komens
 
-## Počet konceptů
+## Získat všechny koncepty
+
+Získá všechny koncepty uživatele
 
 ## Požadavek
 ```
@@ -27,7 +29,7 @@ Post /api/3/komens/concepts
         "Type": "parents",
         "Name": "Jan Novák"
       },
-      "LifeTime": "ToRead",
+      "LifeTime": "ToRead", //nullable Enum "ToConfirm", "ToRead", "ToRemoval", "Validity"
       "MessageType": "OBECNA",
       "DateFrom": null,
       "DateTo": null,
