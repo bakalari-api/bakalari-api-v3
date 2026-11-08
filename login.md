@@ -171,3 +171,10 @@ Na starší API bez ```client_id```, nebo ```grant_type``` dostaneme
 
 
 
+Při použití špatného `Content-Type`
+```json
+{
+  "error": "invalid_request",
+  "error_description": "The specified 'Content-Type' header is invalid."
+}
+```
