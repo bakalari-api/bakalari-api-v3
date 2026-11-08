@@ -68,6 +68,26 @@ POST /api/3/komens/messages/noticeboard
 Vrací komens připnuté k noticeboard.
 Vrací výchozí odpověď.
 
+### Formát dotazu
+
+Do všech dotazů na seznamy jde dát tělo:
+
+```jsonc
+{
+  // vrací pouze zprávy v tomto časovém intervalu
+  "DateFrom": "2000-01-01T00:00:00.000",
+  "DateTo": "2026-11-11T00:00:00.000",
+  // vrátit i skryté zprávy (skryjí se pomocí PUT komens/message/$ID/mark-as-hidden a mark-as-unhidden)
+  "IncludeHidden": false,
+  // stránkování, oficiální aplikace stahuje zprávy postupně
+  "Pagination": {
+    "PageNumber": 3,
+    "PageSize": 10
+  },
+  // hledání ve zprávách
+  "Search": "prázdniny"
+}
+```
 
 ## Dotaz na jednotlivý komens
 
