@@ -10,6 +10,12 @@ Všechny adresy [v seznamu endpointů](endpoints.md) začínají lomítkem. Čá
 
 **Příklad:** Pokud je přihlášení do Bakalářů na adrese `https://www.example.com:444/login`, pak bude „část před lomítkem“ odpovídat `https://www.example.com:444`. Adresa modulu marks tedy bude `https://www.example.com:444/api/3/marks`.
 
+## Hlavičky
+
+Každý požadavek na API (kromě [`/api/login`](login.md)) potřebuje hlavičku `Authorization` s hodnotou `Bearer $ACCESS_TOKEN`.
+
+Všechny požadavky POST s tělem (body) musí navíc obsahovat hlavičku `Content-Type` nastavenou na `application/json` nebo `application/x-www-form-urlencoded`. Fungují obě hodnoty (pravděpodobně i jiné), ale oficiální aplikace používá `application/json`, proto doporučuji použít právě tuto variantu.
+
 ## Aplikace postavené na Bakaláři API verze 3
 
 * Průměr Známek – aplikace pro výpočet váženého průměru s možností předvídání známek (funkční offline): [Průměr Známek na Google Play](https://play.google.com/store/apps/details?id=cz.fely.weightedaverage)
