@@ -44,7 +44,7 @@ Bakaláři podporují tyto seznamy komens.
 
 ```
 POST /api/3/komens/messages/received
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací přijaté komens.
@@ -53,7 +53,7 @@ Vrací výchozí odpověď.
 
 ```
 POST /api/3/komens/messages/sent
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací odeslané komens.
@@ -62,7 +62,7 @@ Vrací výchozí odpověď.
 
 ```
 POST /api/3/komens/messages/noticeboard
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací komens připnuté k noticeboard.
