@@ -191,7 +191,6 @@ Vrací prázdnou HTTP odpověď `204`.
 
 ## Dotazy na počet nepřečtených komens
 
-
 ### Odpověď
 
 Vrací počet nepřečtených komens v daném seznamu.
@@ -210,7 +209,6 @@ GET /api/3/komens/messages/received/unread
 Vrací počet přijatých komens.
 Vrací výchozí odpověď.
 
-
 ```
 GET /api/3/komens/messages/noticeboard/unread
 "Content-Type: application/x-www-form-urlencoded"
@@ -218,6 +216,32 @@ GET /api/3/komens/messages/noticeboard/unread
 ```
 Vrací počet komens připnutých k noticeboard.
 Vrací výchozí odpověď.
+
+```
+GET /api/3/komens/concepts/count
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací počet konceptů.
+Vrací výchozí odpověď.
+
+### Vše najednou
+
+```
+GET /api/3/komens/messages/unread
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací počet nepřečtených komens jako JSON:
+
+```json
+{
+    "ReceivedCount": 0,
+    "NoticeboardCount": 0,
+    "RatingCount": 0,
+    "ApologyCount": 0
+}
+```
 
 ## Chyby
 
