@@ -3,7 +3,6 @@
 ## Požadavek
 ```
 GET /api/3/marks/count-new
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

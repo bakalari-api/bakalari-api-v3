@@ -5,7 +5,6 @@
 
 ```
 GET /api/3/webmodule
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
@@ -49,7 +48,6 @@ Možnosti spolupráce webové verze s aplikací
 
 ```
 GET /api/3/logintoken
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

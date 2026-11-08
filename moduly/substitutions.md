@@ -3,7 +3,6 @@
 ## Požadavek
 ```
 GET /api/3/substitutions (?from=YYYY-MM-dd)
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

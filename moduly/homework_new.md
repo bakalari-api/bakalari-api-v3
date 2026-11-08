@@ -4,7 +4,6 @@
 ## Požadavek
 ```
 GET /api/3/homeworks/count-actual
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

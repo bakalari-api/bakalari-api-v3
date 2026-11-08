@@ -5,21 +5,18 @@
 Všechny události:
 ```
 GET /api/3/events (?from=YYYY-MM-dd)
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 Pouze události uživatele:
 ```
 GET /api/3/events/my (?from=YYYY-MM-dd)
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 Veřejné události:
 ```
 GET /api/3/events/public (?from=YYYY-MM-dd)
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

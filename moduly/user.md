@@ -5,7 +5,6 @@ Vrací informace o uživateli.
 ## Požadavek
 ```
 GET /api/3/user
-Content-Type: application/x-www-form-urlencoded
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

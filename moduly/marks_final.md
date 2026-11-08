@@ -6,7 +6,6 @@ všechny vysvědčení od začátku studia
 
 ```
 GET /api/3/marks/final
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

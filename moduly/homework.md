@@ -5,7 +5,6 @@ Související endpointy: [přílohy](attachment.md), [označování hotových/ne
 ## Požadavek
 ```
 GET /api/3/homeworks (?from=YYYY-MM-dd) (?to=YYYY-MM-dd)
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

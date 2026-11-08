@@ -7,7 +7,6 @@ Na konci zprávy se nachází seznam `Recipients` obsahující všechny příjem
 ## Požadavek
 ```
 GET api/3/komens/message-types
-"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

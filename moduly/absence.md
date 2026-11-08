@@ -3,7 +3,6 @@
 ## Požadavek
 ```
 GET /api/3/absence/student
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
