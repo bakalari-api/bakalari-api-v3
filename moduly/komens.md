@@ -172,18 +172,22 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
 ```
 
 
-## Dotaz na označení komens jako přečtené
-
+## Dotaz na označení komens
 
 ```
-PUT /api/3/komens/message/$ID/mark-as-read
+PUT /api/3/komens/message/$ID/$TYP
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
-Nastavuje komens jako přečtený v systému Bakalářů. (Doporučuji zavolat zároveň při získávání detailu zprávy při atributu `Read` na `false`)
+
+$TYP | Popis
+:--- | :----
+mark-as-read | Nastavuje komens jako přečtený.
+mark-as-hidden | Skryje komens, aby se neukazoval v seznamu.
+mark-as-unhidden | Odkryje komens v seznamu.
+mark-as-confirmed | Potvrdí zprávu.
 
 Vrací prázdnou HTTP odpověď `204`.
-
 
 ## Dotazy na počet nepřečtených komens
 
