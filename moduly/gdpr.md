@@ -12,7 +12,6 @@ Vrací celé číslo; v zachycené odpovědi byla hodnota `0`.
 ## Požadavek
 ```
 GET /api/3/gdpr/commissioners
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

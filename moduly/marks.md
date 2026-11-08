@@ -5,7 +5,6 @@ vrací předměty a jejich známky
 ## Požadavek
 ```
 GET /api/3/marks
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

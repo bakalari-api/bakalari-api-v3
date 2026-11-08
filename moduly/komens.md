@@ -95,7 +95,6 @@ Do všech dotazů na seznamy jde dát tělo:
 
 ```
 GET /api/3/komens/messages/{received/sent}/$ID
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu komens.
@@ -176,7 +175,6 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
 
 ```
 PUT /api/3/komens/message/$ID/$TYP
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
@@ -203,7 +201,6 @@ Vrací počet nepřečtených komens v daném seznamu.
 
 ```
 GET /api/3/komens/messages/received/unread
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací počet přijatých komens.
@@ -211,7 +208,6 @@ Vrací výchozí odpověď.
 
 ```
 GET /api/3/komens/messages/noticeboard/unread
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací počet komens připnutých k noticeboard.
@@ -219,7 +215,6 @@ Vrací výchozí odpověď.
 
 ```
 GET /api/3/komens/concepts/count
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací počet konceptů.
@@ -229,7 +224,6 @@ Vrací výchozí odpověď.
 
 ```
 GET /api/3/komens/messages/unread
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací počet nepřečtených komens jako JSON:

@@ -5,7 +5,6 @@ vrací kázeňské přestupky a pochvaly (třídního učitele, ředitele) za ce
 ## Požadavek
 ```
 GET /api/3/marks/measures
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

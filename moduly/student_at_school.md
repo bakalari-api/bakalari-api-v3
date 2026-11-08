@@ -5,7 +5,6 @@ Vrací informace o lokaci žáka.
 ## Požadavek
 ```
 GET /api/3/user/student-at-school
-Content-Type: application/x-www-form-urlencoded
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

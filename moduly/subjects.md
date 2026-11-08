@@ -5,7 +5,6 @@ vrací seznam předmětů a informace o jejich učitelích
 ## Požadavek
 ```
 GET /api/3/subjects
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

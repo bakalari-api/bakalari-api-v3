@@ -71,7 +71,6 @@ Získá koncept podle ID
 ## Požadavek
 ```
 Get /api/3/komens/concept/$ID
-"Content-Type: application/json; charset=utf-8"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

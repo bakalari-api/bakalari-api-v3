@@ -9,7 +9,6 @@ formát data ```YYYY-MM-dd```
 
 ```
 GET /api/3/timetable/actual?date=YYYY-MM-dd
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
@@ -21,7 +20,6 @@ GET /api/3/timetable/actual?date=YYYY-MM-dd
 
 ```
 GET /api/3/timetable/permanent
-"Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

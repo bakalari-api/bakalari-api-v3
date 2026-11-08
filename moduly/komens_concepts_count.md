@@ -7,7 +7,6 @@ Získá počet konceptů uživatele
 ## Požadavek
 ```
 Get /api/3/komens/concepts/count
-"Content-Type: application/json; charset=utf-8"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 

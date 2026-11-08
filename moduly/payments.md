@@ -9,7 +9,6 @@ vrací celkový stav třídního fondu při odeslání požadavku
 ### Požadavek
 ```
 GET /api/3/payments/classfund/summary
-"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
@@ -31,7 +30,6 @@ vrací seznam všech provedených plateb (příjmů i výdajů) seskupených po 
 ### Požadavek
 ```
 GET /api/3/payments/classfund (?sort=asc nebo ?sort=desc) (?search=hledám)
-"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
@@ -92,7 +90,6 @@ vrací údaje pro vkládání peněz do fondu, mobilní aplikace na základě t�
 ### Požadavek
 ```
 GET /api/3/payments/classfund/paymentsinfo
-"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 
