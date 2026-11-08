@@ -44,7 +44,7 @@ Bakaláři podporují tyto seznamy komens.
 
 ```
 POST /api/3/komens/messages/received
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací přijaté komens.
@@ -53,7 +53,7 @@ Vrací výchozí odpověď.
 
 ```
 POST /api/3/komens/messages/sent
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací odeslané komens.
@@ -62,12 +62,32 @@ Vrací výchozí odpověď.
 
 ```
 POST /api/3/komens/messages/noticeboard
-"Content-Type: application/x-www-form-urlencoded"
+"Content-Type: application/json"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
 Vrací komens připnuté k noticeboard.
 Vrací výchozí odpověď.
 
+### Formát dotazu
+
+Do všech dotazů na seznamy jde dát tělo:
+
+```jsonc
+{
+  // vrací pouze zprávy v tomto časovém intervalu
+  "DateFrom": "2000-01-01T00:00:00.000",
+  "DateTo": "2026-11-11T00:00:00.000",
+  // vrátit i skryté zprávy (skryjí se pomocí PUT komens/message/$ID/mark-as-hidden a mark-as-unhidden)
+  "IncludeHidden": false,
+  // stránkování, oficiální aplikace stahuje zprávy postupně
+  "Pagination": {
+    "PageNumber": 3,
+    "PageSize": 10
+  },
+  // hledání ve zprávách
+  "Search": "prázdniny"
+}
+```
 
 ## Dotaz na jednotlivý komens
 
@@ -152,21 +172,24 @@ Vrací detail jednoho komens podle kategorie ve formátu jednoho JSON objektu ko
 ```
 
 
-## Dotaz na označení komens jako přečtené
-
+## Dotaz na označení komens
 
 ```
-PUT /api/3/komens/message/$ID/mark-as-read
+PUT /api/3/komens/message/$ID/$TYP
 "Content-Type: application/x-www-form-urlencoded"
 "Authorization: Bearer ACCESS_TOKEN"
 ```
-Nastavuje komens jako přečtený v systému Bakalářů. (Doporučuji zavolat zároveň při získávání detailu zprávy při atributu `Read` na `false`)
+
+$TYP | Popis
+:--- | :----
+mark-as-read | Nastavuje komens jako přečtený.
+mark-as-hidden | Skryje komens, aby se neukazoval v seznamu.
+mark-as-unhidden | Odkryje komens v seznamu.
+mark-as-confirmed | Potvrdí zprávu.
 
 Vrací prázdnou HTTP odpověď `204`.
 
-
 ## Dotazy na počet nepřečtených komens
-
 
 ### Odpověď
 
@@ -186,7 +209,6 @@ GET /api/3/komens/messages/received/unread
 Vrací počet přijatých komens.
 Vrací výchozí odpověď.
 
-
 ```
 GET /api/3/komens/messages/noticeboard/unread
 "Content-Type: application/x-www-form-urlencoded"
@@ -194,6 +216,32 @@ GET /api/3/komens/messages/noticeboard/unread
 ```
 Vrací počet komens připnutých k noticeboard.
 Vrací výchozí odpověď.
+
+```
+GET /api/3/komens/concepts/count
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací počet konceptů.
+Vrací výchozí odpověď.
+
+### Vše najednou
+
+```
+GET /api/3/komens/messages/unread
+"Content-Type: application/x-www-form-urlencoded"
+"Authorization: Bearer ACCESS_TOKEN"
+```
+Vrací počet nepřečtených komens jako JSON:
+
+```json
+{
+    "ReceivedCount": 0,
+    "NoticeboardCount": 0,
+    "RatingCount": 0,
+    "ApologyCount": 0
+}
+```
 
 ## Chyby
 
